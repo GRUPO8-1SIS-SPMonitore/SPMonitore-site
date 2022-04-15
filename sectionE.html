@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPMonitore</title>
+    <link rel="stylesheet" href="estilos.css">
+    <a href="https://storyset.com/data">Data illustrations by Storyset</a>
+</head>
+<body>
+<section class="sectionE">
+    <div class="img" >
+        <img class="img1"src="Google sitemap-amico.png" alt="">
+    </div>
+    <div class="divPrincipal">
+    <div class="div1">
+        <h4>POR QUE MONITORAR</h4>
+    </div> <br>
+    <div class="div2">
+        <h1>CONHECENDO O <br> 
+            PROJETO</h1>
+    </div> <br>
+    <div class="divTexto">
+        Um edifício que possui um alto fluxo de pessoas, integrando em um só local  a realidade de trabalho <br>
+        e de estudo, com espaços comuns a todos e uma diversidade de horários muito grande, encontra a <br>
+        limitação de espaço e o risco da desorganização, perda de tempo em movimentações desnecessárias, <br> desconforto e possíveis acidentes entre as pessoas. <br>
+        A fim de evitar essa problemática, a melhor resposta é o  monitoramento dos espaços, através de uma <br>
+        tecnologia IoT, que traz dados em tempo real a respeito da quantidade de pessoas em cada espaço. <br>
+        Proporcionando então: <br>
+        - agilidade e otimização do tempo para os alunos que querem saber se a biblioteca/sala de jogos <br>
+        estão livres para uso; <br>
+        - organização para professores liberarem suas turmas para o almoço no momento mais adequado. <br>
+        A longo prazo: <br>
+        - auxiliando a faculdade no manejamento de recursos, direcionando-os para as áreas mais acessadas, <br>
+        ou investindo de outras formas em áreas de pouco acesso.
+    </div>
+</div>
+</section>
+<section class="sectionF">    
+    <div class="banner"> 
+        <h3>COMO ISSO AFETA MEU ESPAÇO E O MEU TEMPO? <br>
+            Calcule e confira o quanto você pode economizar de tempo!</h3> <br> <br>
+    
+        <h3>Quanto tempo de locomoção entre os espaços?</h3>
+        <input placeholder="Tempo (minutos)" type="text" id="in_tempo">
+        <h3>Quantas consultas aos espaços você faz durante a semana?</h3>
+        <input placeholder="Consultas (por semana)" type="text" id="in_consulta"> <br>
+        <button class="btn"onclick="calcular()">CALCULAR</button> <br><br>
+        <div id="div_resultado"></div>
+        <div class="img2">
+            <img src="Calculator-amico.png" alt="">
+        </div>
+     </div>
+</section>
+</body>
+</html>
+<script>
+    function calcular() {
+        // aqui, criamos a função calcular, quatro variáveis que facilitam a organização do código e trouxemos à tela o nosso div_resultado mencionado no HTML
+        // utilizamos o toFixed e o Number
+        var minutos=Number (in_tempo.value)
+        var vezes= Number(in_consulta.value)
+        var calculo= Number(in_tempo.value) *(in_consulta.value)
+        var calculo3= Number((in_tempo.value) *(in_consulta.value))*200
+
+        div_resultado.innerHTML = 
+        ` <h3> Levando <b>${minutos}</b> minutos para transitar entre os espaços e fazendo isso <b>${vezes}</b> vezes por semana, <br> a perda de tempo equivale a <br>
+        <b>${calculo}</b>minutos/por semana, <br>
+        <b>${calculo*22}</b>minutos/por mês, <br>  
+        <b>${calculo*200}</b>minutos/por ano. <br> 
+        Anualmente, <b>${(calculo3/60).toFixed(0)}</b> horas/por ano. </h3> <br> <br> <br>
+
+        <h3> Sabendo que leva cerca de <b>30 segundos</b> para
+        consultar o sistema da <i><b>SPMonitore</b></i>, <br>
+        a sua <b>economia de tempo</b> será de <b> ${(Number (in_tempo.value)*100)/0.5}%</b>. </h3>
+        <br>
+        <h3>Monitorar espaços é ganhar tempo. <br>
+            Ganhar tempo é ganhar satisfação. <br>
+            Pessoas satisfeitas são pessoas mais produtivas!</h3> 
+        `
+    }
+</script>
