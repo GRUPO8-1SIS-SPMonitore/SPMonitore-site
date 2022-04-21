@@ -1,0 +1,42 @@
+.titulo1 {
+    margin: 0px;
+    color: white;
+}
+
+.titulo2 {
+    margin: 0px;
+    color: white;
+}
+
+
+.titulo3 {
+    margin: 0px;
+    color: white;
+}
+
+
+.projeto {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    border: 0;
+    font-weight: 550;
+    background-color:rgba(255, 100, 100, 0.4);
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+
+.volta {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    border: 0;
+    font-weight: 550;
+    background-color:rgba(255, 100, 100, 0.4);;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
