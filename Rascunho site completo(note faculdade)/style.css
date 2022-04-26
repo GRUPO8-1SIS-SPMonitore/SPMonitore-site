@@ -115,7 +115,7 @@ a{
 }
 body{
     font-size:100%;
-    background: #131313;
+    background: black;
     overflow-x: hidden;
 }
 .conteudo1{
@@ -219,6 +219,7 @@ body{
   /*Rascunho SECTION C*/
   
 .sectionc{
+    margin-top: 5%;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -261,7 +262,7 @@ body{
 .tracoc{
    width: 50px;
    height: 3px;
-   background-color: white;
+   background-color: #B02CE8;
 }
 
 .imgc{
@@ -346,6 +347,10 @@ body{
  .card:hover .flipinnerx {
     transform: rotateX(180deg);
   }
+.fotoDebora {
+    width: 100%;
+    height: 100%;
+}
 
 
 
@@ -355,30 +360,32 @@ body{
 
 .sectionE {
     background: linear-gradient(to bottom, #003366 0%, #B02CE8 100%);
-    height: 100vh;
-    width: 100vw;    
+    height: 100%;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;    
     color: white;
 }
 .divPrincipalE {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     padding-top: 3%;
 }
 .div1E {
-    width: 100vw;
+    gap: 10px;
+    margin-top: 3%;
     display: flex;
     align-items: center;
 
 }
 .div2E {
-    height: 15vh;
-    width: 20VW;
-    margin-left: 80%;
+    height: 15%;
+    width: 30%;
+    margin-left: 70%;
 }
 .tituloE{
     color: white;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 20px;
     margin-left: 81%;
     
 }
@@ -390,12 +397,11 @@ body{
 }
 .paragrafoE{
     color: white;
-    font-size: 22px;
-    font-weight: 800;
+    font-size: 45px;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
-    margin-right: 8%;
+    margin-right: 10%;
     text-align: right;
 
 }
@@ -412,19 +418,18 @@ body{
 .textoE {
     color: whitesmoke;
     font-size: 20px;
-    margin-top: 5vh;
-    font-weight: 400;
-    line-height:20px;
+    margin-top: 2%;
+    margin-right: 9%;
+    line-height:25px;
     text-align: right; 
-    padding-right: 9%;
 }
 .divimgE {
     width: 50%;
     
 }
 .img1E {
-    width: 80%; 
-    height: 80%;
+    width: 70%; 
+    height: 70%;
     margin-left: 6%;
 }
 
@@ -532,3 +537,189 @@ body{
     color:#b02ce8;
 }
 
+/*Contato*/
+.sectionContato {
+    margin-top: 5%;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+.bannerCont {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 85%;
+    height: 90%;
+    margin: auto;
+}
+.formsCont {
+    background-color: #003366;
+    width: 50%;
+    height: 75%;
+    align-items: center;
+}
+#in_nome {
+    margin:5%;
+    padding-left: 2%;
+    border-radius: 10px;
+    border: #B02CE8 solid 2px;
+    background-color: lavender;
+    width: 25vw;
+    height: 6vh;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
+}
+#in_email {
+    margin:5%;
+    padding-left: 2%;
+    border-radius: 10px;
+    border: #b02ce8 solid 2px;
+    background-color: lavender;
+    width: 25vw;
+    height: 6vh;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
+}
+#in_tel {
+    margin:5%;
+    padding-left: 2%;
+    border-radius: 10px;
+    border: #B02CE8 solid 2px;
+    background-color: lavender;
+    width: 25vw;
+    height: 6vh;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
+}
+#in_msg {
+    margin:5%;
+    padding-left: 2%;
+    padding-top: 0;
+    border-radius: 10px;
+    border: #B02CE8 solid 2px;
+    background-color: lavender;
+    width: 25vw;
+    height: 25vh;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
+}
+.btnCont {
+    width: 40%;
+    margin-left: 15%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    background:linear-gradient(to bottom, #003366 0%, #b02ce8 100%);
+    color: white;
+    font-size: 15px;
+}
+.textoCont {
+    width: 42%;
+    background-color: #B02CE8;
+    display: flex;
+    flex-direction: column;
+}
+.img3 {
+    width: 100% ;
+    height: 100%;
+
+}
+
+/*SECTION G E H */
+.bannerfinal{
+    margin-top: 5%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    background-image: url("https://atomicpapers.com.br/web/wallpapers/predio-por-do-sol/1280x960.jpg");
+    background-size: cover;
+    }
+
+    
+    .titulo1{
+        
+        display: flex;
+        color: black;
+        font-size: 40px;
+        height: 60px;
+        width: 100%;
+        margin-top: 8%;
+        margin-left: 2%;
+        align-items: center;
+        text-align: center;
+       }
+
+       
+       .titulo2{
+        display: flex;
+        color: black;
+        font-size: 40px;
+        height: 60px;
+        width: 100%;
+        margin-top: 2%;
+        margin-left: 22%;
+        text-align: center;
+       }
+
+       
+       .titulo3{
+        display: flex;
+        color: black;
+        font-size: 40px;
+        height: 60px;
+        width: 100%;
+        margin-top: 2%;
+        margin-left: 42%;
+        align-items: center; 
+        text-align: center;
+       }
+
+       .btn_projeto{
+        margin-top: 35px;
+        border: 2;
+        font-weight: 550;
+        background-color:transparent;
+        color: white;
+        font-size: 18px;
+        border-radius: 4px;
+        padding: 10px 15px;
+        align-items: center;
+       }
+
+      
+       .btn_volta{
+        margin-top: 35px;
+        border: 2;
+        font-weight: 550;
+        background-color:transparent;
+        color: white;
+        font-size: 18px;
+        border-radius: 4px;
+        padding: 10px 15px;
+        align-items: center
+       }
+
+       .baixo{
+        width: 100%;
+        height: 60px;
+        border-color: #003366;
+        align-items: center;
+        background-color: transparent;
+    }
+       
+   
+    footer {
+        position: bottom;
+        background-color: #003366 ;
+        color: #FFF;
+        width: 100%;
+        height: 125px;    
+        text-align: center;
+        line-height: 100px;
+    }

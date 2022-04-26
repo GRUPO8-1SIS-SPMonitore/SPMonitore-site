@@ -1,5 +1,5 @@
 body{
-    font-family: 'Poppins','sans','sans';
+    font-family: 'Poppins',sans-serif;
     margin: 0;
     padding: 0;
     box-sizing:border-box;
@@ -20,7 +20,7 @@ body{
 }
 
     .titulo1{
-        font-family:'Courier New', Courier, monospace;
+        
         display: flex;
         color: black;
         font-size: 40px;
@@ -33,7 +33,6 @@ body{
        }
 
        .titulo2{
-        font-family:'Courier New', Courier, monospace;
         display: flex;
         color: black;
         font-size: 40px;
@@ -45,7 +44,6 @@ body{
        }
 
        .titulo3{
-        font-family:'Courier New', Courier, monospace;
         display: flex;
         color: black;
         font-size: 40px;
@@ -58,9 +56,13 @@ body{
        }
 
        .btn_projeto{
+<<<<<<< HEAD
         font-family: 'Courier New', Courier, monospace;
         margin-top: 45px;
         margin-left: 40.5%;
+=======
+        margin-top: 35px;
+>>>>>>> d57111f7b7f586951cdff05f5c75008a65d9b69f
         border: 2;
         font-weight: 550;
         background-color:transparent;
@@ -72,7 +74,6 @@ body{
        }
 
        .btn_volta{
-        font-family: 'Courier New', Courier, monospace;
         margin-top: 35px;
         margin-left: -1.5%;
         border: 2;
