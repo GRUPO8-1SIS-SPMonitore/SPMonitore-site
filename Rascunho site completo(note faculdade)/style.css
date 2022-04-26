@@ -276,3 +276,71 @@ body{
 .texto .img{
    display: inline;
 }
+
+.sectiond{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    background-color: black;
+}
+
+.containerd{
+    width: 100%;
+    height: 90vh;
+    padding: 6%;
+}
+
+.titulod {
+    color: white;
+    font-size: 25px;
+    height: 80px;
+    width: 50%;
+    align-items: left;
+ }
+
+ .detalhed{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+ }
+ 
+ .tracod{
+    width: 50px;
+    height: 3px;
+    background-color: rgb(13, 116, 90);
+ }
+
+ .flipinnerx{
+    display: flex;
+    align-items: center;
+    color: white;
+    border: white solid 0.4px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+ }
+  
+ .backcardx {
+    transform: rotateX(180deg);
+    display: flex;
+    align-items: center;
+    color: white;
+    border: white solid 0.4px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    backface-visibility: hidden;
+
+  }
+
+ .card:hover .flipinnerx {
+    transform: rotateX(180deg);
+  }
