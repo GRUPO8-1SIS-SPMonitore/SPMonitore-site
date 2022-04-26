@@ -75,7 +75,7 @@
                     <h3>Controle seu espaço</h3>
                 </div>
                 <div class="backcard">
-                    <h3>Rodou!!</h3>
+                    <h3>Espaços monitorados otimizam o tempo!</h3>
                 </div>
             </div>    
         </div>    
@@ -85,7 +85,7 @@
                     <h3>Simulador Financeiro</h3>
                 </div>
                 <div class="backcard">
-                    <h3>Rodou!!</h3>
+                    <h3>Simule a sua economia de tempo utilizando o nosso sistema!</h3>
                 </div>
             </div>    
         </div> 
@@ -95,7 +95,7 @@
                     <h3>Dashboard</h3>
                 </div>
                 <div class="backcard">
-                    <h3>Rodou!!</h3>
+                    <h3>Consulte os seus dados através de dashboards!</h3>
                 </div>
             </div>    
         </div> 
@@ -105,7 +105,7 @@
                     <h3>Suporte</h3>
                 </div>
                 <div class="backcard">
-                    <h3>Rodou!!</h3>
+                    <h3>O que coloca aqui?</h3>
                 </div>
             </div>    
         </div> 
@@ -146,8 +146,87 @@
     </div>
 
 </section>
-
+<section class="sectionE">
+    <div class="divPrincipalE">
+            <div class="div1E">  
+                <h4 class="tituloE">POR QUE MONITORAR</h4>
+                <div class="detalheE"></div>
+            </div>
+            <div class="div2E">
+                <h3 class="paragrafoE">C O N H E C E N D O  O <br> P R O J E T O</h3>
+            </div> 
+        <div class="containerE">
+        <div class="divimgE">
+                <img class="img1E"src="Business analytics-amico.svg" alt="">
+        </div>
+        <div class="divTextoE">
+            <p class="textoE">
+            Um edifício que possui um alto fluxo de pessoas, integrando em um só local a realidade de trabalho e de estudo, com espaços comuns a todos e uma diversidade de horários muito grande, 
+            encontra a limitação de espaço e o risco da desorganização, perda de tempo em movimentações desnecessárias, desconforto e possíveis acidentes entre as pessoas. 
+            A fim de evitar essa problemática, a melhor resposta é o  monitoramento dos espaços, 
+            através de uma tecnologia IoT, que traz dados em tempo real a respeito 
+            da quantidade de pessoas em cada espaço. Proporcionando então: <br>
+            - agilidade e otimização do tempo para os alunos que querem saber se a 
+            biblioteca/sala de jogos estão livres para uso; <br>
+            - organização para professores liberarem suas turmas para o almoço no 
+            momento mais adequado. <br>
+            A longo prazo: <br>
+            - auxiliando a faculdade no manejamento de recursos, direcionando-os 
+            para as áreas mais acessadas, ou investindo de outras formas em áreas de pouco acesso.
+            </p>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="sectionF">    
+    <div class="bannerF"> 
+        <div class="formsF">
+            <span class="title1F">COMO ISSO AFETA MEU ESPAÇO E O MEU TEMPO?</span> <br>
+            <span class="title2F">Calcule e confira o quanto você pode economizar!</span>
+            <h1 class="perguntasF">Quanto tempo de locomoção entre os espaços?</h1>
+            <input placeholder="Tempo (minutos)" type="text" id="in_tempoF">
+            <h1 class="perguntasF">Quantas consultas aos espaços você faz durante a semana?</h1>
+            <input placeholder="Consultas (por semana)" type="text" id="in_consultaF"> <br>
+            <button class="btnF" onclick="calcular()">CALCULAR</button> <br>
+            </div>
+        <div class="resultadoF">
+            <div id="div_resultado1"></div>
+            <div id="div_resultado2"></div>
+            <div id="div_resultado3"></div>
+        </div>
+     </div>
+</section>
 </body>
 </html> 
 </body>
 </html>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        // aqui, criamos a função calcular, quatro variáveis que facilitam a organização do código e trouxemos à tela o nosso div_resultado mencionado no HTML
+        // utilizamos o toFixed e o Number
+        var minutos=Number (in_tempoF.value)
+        var vezes= Number(in_consultaF.value)
+        var calculo= Number(in_tempoF.value) *(in_consultaF.value)
+        var calculo3= Number((in_tempoF.value) *(in_consultaF.value))*200
+
+        div_resultado1.innerHTML = 
+        `Sua perda de tempo equivale a <br>
+        <b>${calculo}</b>minutos/por semana, <br> 
+        <b>${calculo*22}</b>minutos/por mês,  <br> 
+        <b>${calculo*200}</b>minutos/por ano.  <br>
+        Anualmente, <b>${(calculo3/60).toFixed(0)}</b> horas/por ano.` 
+        
+        div_resultado2.innerHTML = `<br> Sabendo que leva cerca de <b>30 segundos</b> para
+        consultar o sistema da <i><b>SPMonitore</b></i>,
+        a sua <b>economia de tempo</b> será de <b> ${(Number (in_tempoF.value)*100)/0.5}%</b>.` 
+        
+        div_resultado3.innerHTML = `<br>
+        Monitorar espaços é ganhar tempo. <br>
+        Ganhar tempo é ganhar satisfação. <br>
+        Pessoas satisfeitas são pessoas mais produtivas! :)`
+    }
+</script>
+

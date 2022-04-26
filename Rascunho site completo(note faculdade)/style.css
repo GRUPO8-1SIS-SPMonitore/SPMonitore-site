@@ -276,3 +276,186 @@ body{
 .texto .img{
    display: inline;
 }
+
+/*CSS Section E e F*/
+
+/* INÍCIO SECTION E */
+
+.sectionE {
+    background: linear-gradient(to bottom, #003366 0%, #B02CE8 100%);
+    height: 100vh;
+    width: 100vw;    
+    color: white;
+}
+.divPrincipalE {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 3%;
+}
+.div1E {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+
+}
+.div2E {
+    height: 15vh;
+    width: 20VW;
+    margin-left: 80%;
+}
+.tituloE{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 81%;
+    
+}
+.detalheE{
+    width: 50px;
+    height: 3px;
+    margin-left: 1%;
+    background-color: #B02CE8;
+}
+.paragrafoE{
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 8%;
+    text-align: right;
+
+}
+.containerE {
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+.divTextoE {
+    width: 50%;
+    height: 60%;
+
+}
+.textoE {
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: 5vh;
+    font-weight: 400;
+    line-height:20px;
+    text-align: right; 
+    padding-right: 9%;
+}
+.divimgE {
+    width: 50%;
+    
+}
+.img1E {
+    width: 80%; 
+    height: 80%;
+    margin-left: 6%;
+}
+
+/*INÍCIO SECTION F */
+
+.sectionF {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    font-size: 10px;
+    align-items: center;
+    padding-top: 8%;
+}
+
+.bannerF {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 85%;
+    height: 90%;
+    margin: auto;
+    
+}
+.formsF {
+    width: 60%;
+    height: 100%;
+    align-items: center;
+}
+.title1F {
+    padding-top:25vh;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    color: black;
+    font-size: 25px;
+    font-weight: 900;
+}
+.title2F {
+    padding-top:5% ;
+    padding-left: 8%;
+    padding-bottom: 5%;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+.perguntasF {
+    font-size: 18px;
+    padding-left: 5%;
+    color: gray;
+}
+
+#in_tempoF {
+    margin-left:8%;
+    padding-left: 8%;
+    border-radius: 10px;
+    border: #B02CE8 solid 2px;
+    background-color:lavender ;
+    width: 25vw;
+    height: 6vh;
+    color:black;
+    font-weight: 800;
+    font-size: 15px;
+}
+#in_consultaF {
+    margin-left:8%;
+    padding-left: 8%;
+    border-radius: 10px;
+    border: #B02CE8 solid 2px;
+    background-color: lavender;
+    width: 25vw;
+    height: 6vh;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
+}
+.btnF {
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 15vw;
+    height: 6.5vh;
+    border-radius: 10px;
+    background:linear-gradient(to bottom, #003366 0%, #b02ce8 100%);
+    color: white;
+    font-size: 15px;
+}
+.resultadoF {
+    width: 40%;
+    height: 100%;
+
+}
+#div_resultado1 {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color:#003366;
+}
+#div_resultado2 {
+    font-size: 15px;
+    font-weight: 800;
+    color:#003366
+}
+#div_resultado3 {
+    font-size: 20px;
+    font-weight: 800;
+    color:#b02ce8;
+}
