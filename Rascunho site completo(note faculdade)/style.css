@@ -618,9 +618,13 @@ body{
 }
 .textoCont {
     width: 42%;
-    background-color: #B02CE8;
+    background-color: white;
     display: flex;
     flex-direction: column;
+    padding-left: 5%;
+}
+.fraseCont {
+    font-size: 45px;
 }
 .img3 {
     width: 100% ;
@@ -631,95 +635,122 @@ body{
 /*SECTION G E H */
 .bannerfinal{
     margin-top: 5%;
-    height: 80vh;
+    width: 100%;
+    height: 80%;
     justify-content: center;
     align-items: center;
     padding-left: 2%;
     padding-right: 2%;
     display: flex;
-    background-image: url("https://atomicpapers.com.br/web/wallpapers/predio-por-do-sol/1280x960.jpg");
+    background: rgba(0, 0, 0, 0.5) url('imagens/cidade1.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
     background-size: cover;
-    }
+    background-blend-mode: darken;  
+}
+.titulo1{
+    display: flex;
+    color: black;
+    font-size: 40px;
+    height: 60px;
+    width: 100%;
+    margin-top: 8%;
+    margin-left: 2%;
+    align-items: center;
+    text-align: center;
+}
 
-    
-    .titulo1{
-        
-        display: flex;
-        color: black;
-        font-size: 40px;
-        height: 60px;
-        width: 100%;
-        margin-top: 8%;
-        margin-left: 2%;
-        align-items: center;
-        text-align: center;
-       }
+.titulo2{
+    display: flex;
+    color: black;
+    font-size: 40px;
+    height: 60px;
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 22%;
+    text-align: center;
+}
 
-       
-       .titulo2{
-        display: flex;
-        color: black;
-        font-size: 40px;
-        height: 60px;
-        width: 100%;
-        margin-top: 2%;
-        margin-left: 22%;
-        text-align: center;
-       }
-
-       
-       .titulo3{
-        display: flex;
-        color: black;
-        font-size: 40px;
-        height: 60px;
-        width: 100%;
-        margin-top: 2%;
-        margin-left: 42%;
-        align-items: center; 
-        text-align: center;
-       }
-
-       .btn_projeto{
+.btn_projeto{
+        margin-top: 45px;
+        margin-left: 40.5%;
         margin-top: 35px;
+        border: 2;
+        font-weight: 550;
+        background-color:transparent;
+        color: black;
+        font-size: 18px;
+        border-radius: 2px;
+        padding: 10px 15px;
+        align-items: center;
+}
+
+.btn_volta{
+        margin-top: 35px;
+        margin-left: -1.5%;
         border: 2;
         font-weight: 550;
         background-color:transparent;
         color: white;
         font-size: 18px;
-        border-radius: 4px;
-        padding: 10px 15px;
-        align-items: center;
-       }
-
-      
-       .btn_volta{
-        margin-top: 35px;
-        border: 2;
-        font-weight: 550;
-        background-color:transparent;
-        color: white;
-        font-size: 18px;
-        border-radius: 4px;
-        padding: 10px 15px;
+        border-radius: 2px;
+        padding: 15px 15px;
         align-items: center
-       }
-
-       .baixo{
-        width: 100%;
-        height: 60px;
-        border-color: #003366;
-        align-items: center;
-        background-color: transparent;
-    }
-       
+}
    
-    footer {
-        position: bottom;
-        background-color: #003366 ;
-        color: #FFF;
+footer {
+    position: bottom;
+    background-color: black ;
+    color: white;
+    width: 100%;
+    height: 23%;    
+    text-align: center;
+    line-height: 100px;
+}
+.titulo4{
+        display: flex;
+        color: white;
+        font-size: 15px;
+        height: 40px;
         width: 100%;
-        height: 125px;    
+        margin-top:  -8%;
+        margin-left: 0%;
         text-align: center;
-        line-height: 100px;
-    }
+        align-items: flex-start;
+}
+.titulo5{
+        display: flex;
+        color: white;
+        font-size: 15px;
+        height: 40px;
+        width: 100%;
+        margin-top:  -1%;
+        margin-left: 0%;
+        text-align: center;
+        align-items: flex-start;
+ }
+
+ .titulo6{
+        display: flex;
+        color: white;
+        font-size: 15px;
+        height: 40px;
+        width: 100%;
+        margin-top:  -1%;
+        margin-left: 0%;
+        text-align: center;
+        align-items: flex-start;
+}
+
+.titulo7{
+        display: flex;
+        color: white;
+        font-size: 15px;
+        height: 40px;
+        width: 100%;
+        margin-top:  -1%;
+        margin-left: 0%;
+        text-align: center;
+        align-items: flex-start;
+}
