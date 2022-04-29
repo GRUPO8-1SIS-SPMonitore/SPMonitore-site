@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>SpMonitore - Login</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+    <title>SPMonitore</title>
 </head>
 
 <body>
@@ -52,8 +55,9 @@
                 <a href="">Sobre</a>
                 <a href="">Simulador</a>
                 <a href="">Contato</a>
-                <button class="btn_entrar"><a href="login.html">Entrar</a></button>
-                <button class="btn_login">Login</button>
+                <button class="btn_entrar"><a href="página2.html
+                    ">Cadastro</a></button>
+                <button class="btn_login"><a href="página3.html">Login</a></button>
             </nav>
         </header>
 
@@ -67,7 +71,7 @@
                         <img src="imagens/Tablet login-bro.svg" alt="">
                     </div>
                 </div>
-                <div class="forms-cadastro">
+                <div class="forms-login">
                     <svg class="logo2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50px " height="50px" viewBox="0 0 50 50">
                             <g id="Grupo_4" data-name="Grupo 4" transform="translate(-47.5 -41.461)">
@@ -105,32 +109,36 @@
                             </g>
                         </svg>
                     </svg><br>
-                    <span id="txt-nome-cad">Nome:</span><br>
 
-                    <input class="in-form-cad" placeholder="Nome de usuário" type="text" id="nome-cad"><br>
-                    
-                    <span id="txt-email-cad">Email</span><br>
+                    <div class="formularioA">
+                        <span class="txt-form-login">Email:</span><br>
 
-                    <input class="in-form-cad" placeholder="Exemplo@gmail.com" id="email-cad" type="text"><br>
+                        <input placeholder="Example@gmail.com" type="email" class="in-form-login"><br>
 
-                    <span id="txt-num-cad">Número</span><br>
+                        <span class="txt-form-login">Senha:</span><br>
 
-                    <input class="in-form-cad" placeholder="(xx) xxxxx-xxxx" type="text" id="num-cad"><br>
+                        <input placeholder="Inserir senha" type="password" class="in-form-login"><br>
+                    </div>
+                    <div class="formularioB">
+                        <input type="checkbox" id="box-usuario">
 
-                    <span id="txt-senha-cad">Crie uma senha</span><span id="txt-aviso">Minimo de 8 caracteres</span><br>
+                        <span id="Lembrar">Lembrar Usuario</span>
 
-                    <input class="in-form-cad" placeholder="Senha" type="password" id="senha-cad"><br>
+                        <span id="forgotPass">Esqueceu sua senha?</span><br>
+                    </div>
+                    <div class="botao">
+                        <button id="btn-login">Entrar</button><br>
+                    </div>
+                    <div class="formularioC">
+                        <span id="txt-1">Não possui uma conta?</span>
 
-                    <span id="txt-conf-senha">Confirme sua senha</span><br>
-
-                    <input class="in-form-cad" placeholder="Confirme sua senha" type="text" id="conf-senha">
-
-                </div>
+                        <span id="txt-2"><a id="link-txt" href="">Faça parte da SpMonitore</a></span>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
-
 </body>
-
 </html>
+<!-- inserir function para validação dos dados inseridos nos inputs
+com alertas -->
