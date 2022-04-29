@@ -1264,3 +1264,20 @@ body{
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
+
+.forms-cadastro{
+    width: 60%;
+    height: 100%;
+    background-color: #131313;
+}
+
+.in-form-cad{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 10%;
+    padding-left: 3%;
+    width: 80%;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #B02CE8;
+}
