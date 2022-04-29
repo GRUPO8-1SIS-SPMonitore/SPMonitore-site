@@ -1014,15 +1014,28 @@ body{
     justify-content: center;
 }
 
-  .container-login{
-      width: 80%;
-      height: 90vh;
-      background-color: rgb(255, 255, 255);
-      margin-top: 7%;
-      margin-bottom: 10%;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
+
+.container-cad{
+    width: 80%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    margin-top: 7%;
+    margin-bottom: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+
+.container-login{
+    width: 80%;
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+    margin-top: 7%;
+    margin-bottom: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
   }
 
 
@@ -1136,13 +1149,13 @@ body{
     height: 35px;
     color: white;
     font-weight: 800;
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'Poppins', sans-serif;
     border: none;
     text-align: center;
     padding: auto;
     border-radius: 5px;
-    background-image: linear-gradient(to bottom, #003366, #B02CE8);
+    background-color:  #B02CE8;
 }
 
 .formularioC{
@@ -1272,12 +1285,48 @@ body{
 }
 
 .in-form-cad{
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     margin-left: 10%;
     padding-left: 3%;
     width: 80%;
     height: 35px;
     border-radius: 5px;
     border: 2px solid #B02CE8;
+}
+
+.txt-form-cad{
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+#termos{
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin-left: 2%;
+}
+
+#link-cad{
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #2178B3;
+}
+
+#box-termos-cad{
+    margin-left: 10%;
+}
+
+.container-btn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3%;
 }
