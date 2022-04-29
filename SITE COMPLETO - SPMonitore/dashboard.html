@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMonitore</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
@@ -18,43 +18,51 @@
     </style>
 </head>
 <body>
+    <!-- colocar tela home antes dos dashboards-->
     
     <section class="dash">
         <div class="top">
-            <h2>Dashboard</h2>  
-            <select class="select" id="sel_espaco">
+            <h2 class="title-dashboard">Monitoramento em tempo real</h2>  
+            <select class="select-dash" id="sel_espaco">
                 <option value="">Biblioteca</option>
                 <option value="">Spacebreak-1</option>
                 <option value="">Spacebreak-2</option>
                 <option value="">Sala de jogos</option>
             </select>
         </div>
-        <div>
-            <h1>Sensor DHT 11 - Umidade</h1>
-            <section style="width:40%">
+        <div class="alertas">
+            <div class="alert">
+
+            </div>
+            <div class="alert">
+
+            </div>
+            <div class="alert">
+
+            </div>
+            <div class="alert">
+
+            </div>
+        </div>
+        <div class="container-grafico">
+            <h1 class="title-grafico">Biblioteca</h1>
+            <div class="div_grafico" style="width:100%">
                 <canvas id="dht11Umidade"></canvas>
-            </section>
-            <h1>Sensor DHT 11 - Temperatura</h1>
-            <section style="width: 40%;">
+            </div>
+            <h1 class="title-grafico">Space break 1</h1>
+            <div class="div_grafico" style="width: 100%;">
                 <canvas id="dht11Temperatura"></canvas>
-            </section>
-            <h1>Sensor Luminosidade</h1>
-            <section style="width: 40%;">
+            </div>
+            <h1 class="title-grafico">Space break 2</h1>
+            <div class="div_grafico" style="width: 100%;">
                 <canvas id="luminosidade"></canvas>
-            </section>
-            <h1>Sensor LM 35 - Temperatura</h1>
-            <section style="width: 40%;">
+            </div>
+            <h1 class="title-grafico">Sala de jogos</h1>
+            <div class="div_grafico" style="width: 100%;">
                 <canvas id="lm35Temperatura"></canvas>
-            </section>
-            <h1>Sensor Chave</h1>
-            <section style="width: 40%;">
-                <canvas id="chave"></canvas>
-            </section>
+            </div>
         </div>
         
-        <div class="grafico">
-
-        </div>
     </section>
 </body>
 </html>
@@ -69,10 +77,10 @@
             type: 'line',
             data: {
                 datasets: [{
-                    label: 'Umidade',
+                    label: 'Movimentação',
                     type: 'line',
-                    borderColor: ['#45b3e7'],
-                    backgroundColor: ['#89cff0']
+                    borderColor: ['#003366'],
+                    backgroundColor: ['#b02ce8']
                 }]
             },
             options: {
@@ -86,7 +94,7 @@
                     yAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: 'Umidade'
+                            labelString: 'Movimentação'
                         },
                         ticks: {
                             beginAtZero: true
@@ -109,10 +117,10 @@
             type: 'line',
             data: {
                 datasets: [{
-                    label: "Temperatura",
+                    label: "Quantidade de pessoas",
                     type: 'line',
-                    borderColor: ['#ff3232'],
-                    backgroundColor: ['#ff7f7f']
+                    borderColor: ['#003366'],
+                    backgroundColor: ['#b02ce8']
                 }]
             },
             options: {
@@ -126,7 +134,7 @@
                     yAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: 'Luminosidade'
+                            labelString: 'Quantidade de pessoas'
                         },
                         ticks: {
                             beginAtZero: true
@@ -149,10 +157,10 @@
             type: 'line',
             data: {
                 datasets: [{
-                    label: 'Luminosidade',
+                    label: 'Quantidade de pessoas',
                     type: 'line',
-                    borderColor: ['#ffd902'],
-                    backgroundColor: ['#ffe135']
+                    borderColor: ['#003366'],
+                    backgroundColor: ['#b02ce8']
                 }]
             },
             options: {
@@ -166,7 +174,7 @@
                     yAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: 'Luminosidade'
+                            labelString: 'Quantidade de pessoas'
                         },
                         ticks: {
                             beginAtZero: true
@@ -189,10 +197,10 @@
             type: 'line',
             data: {
                 datasets: [{
-                    label: 'Temperatura',
+                    label: 'Quantidade de pessoas',
                     type: 'line',
-                    borderColor: ['#ffd902'],
-                    backgroundColor: ['#ffe135']
+                    borderColor: ['#003366'],
+                    backgroundColor: ['#b02ce8']
                 }]
             },
             options: {
@@ -206,7 +214,7 @@
                     yAxes: [{
                         scaleLabel: {
                             display: true,
-                            labelString: 'Temperatura'
+                            labelString: 'Quantidade de pessoas'
                         },
                         ticks: {
                             beginAtZero: true
@@ -219,83 +227,8 @@
             }
         }
     );
-    /* -- chave */
-    var contextoChave = document.getElementById('chave').getContext('2d');
-    contextoChave.canvas.width = 1000;
-    contextoChave.canvas.height = 300;
-    var chave = new Chart(
-        contextoChave,
-        {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: 'Chave',
-                    type: 'line',
-                    borderColor: ['#ffd902'],
-                    backgroundColor: ['#ffe135']
-                }]
-            },
-            options: {
-                scales: {
-                    xAxes: [{
-                        distribution: 'series',
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Chave'
-                        },
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                animation: {
-                    duration: 0
-                }
-            }
-        }
-    );
-
-    var paginacao = {};
-    var tempo = {};
-    function obterDados(grafico, endpoint) {
-        var http = new XMLHttpRequest();
-        http.open('GET', 'http://localhost:3000/sensores/' + endpoint, false);
-        http.send(null);
-        var valores = JSON.parse(http.responseText);
-        if (paginacao[endpoint] == null) {
-            paginacao[endpoint] = 0;
-        }
-        if (tempo[endpoint] == null) {
-            tempo[endpoint] = 0;
-        }
-        // Exibir à partir do último elemento exibido anteriormente
-        var ultimaPaginacao = paginacao[endpoint];
-        paginacao[endpoint] = valores.length;
-        var valores = valores.slice(ultimaPaginacao);
-        valores.forEach((valor) => {
-            //Máximo de 60 itens exibidos no gráfico
-            if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
-                grafico.data.labels.shift();
-                grafico.data.datasets[0].data.shift();
-            }
-
-            grafico.data.labels.push(tempo[endpoint]++);
-            grafico.data.datasets[0].data.push(parseFloat(valor));
-            grafico.update();
-        })
-    }
-
-    setInterval(() => {
-        obterDados(dht11Umidade, 'dht11/umidade');
-        obterDados(dht11Temperatura, 'dht11/temperatura');
-        obterDados(luminosidade, 'luminosidade');
-        obterDados(lm35Temperatura, 'lm35/temperatura');
-        obterDados(chave, 'chave');
-    }, 1000);
-
 </script>
+
+<!-- tela de relatórios com dashboards de média e horários de menos fluxo
+nos espaços. 
+copia e cola o de cima. -->

@@ -122,7 +122,7 @@
                     <h3>Suporte</h3>
                 </div>
                 <div class="backcard">
-                    <h3>O que coloca aqui?</h3>
+                    <h3>Fale conosco e tenha sempre o nosso suporte!</h3>
                 </div>
             </div>    
         </div> 
@@ -320,38 +320,42 @@
 
 <script>
     function calcular() {
-        // aqui, criamos a função calcular, quatro variáveis que facilitam a organização do código e trouxemos à tela o nosso div_resultado mencionado no HTML
-        // utilizamos o toFixed e o Number
         var minutos=Number (in_tempoF.value)
         var vezes= Number(in_consultaF.value)
-        var calculoTotalSemana= Number(in_tempoF.value) *(in_consultaF.value)
-        var calculoSemanasMensal= Number (calculoTotalSemana * (22/5)) // 22 = total de dias úteis
+        
+        // cálculos do deslocamento (sem SPMonitore)
+        var calculoTotalSemana= minutos * vezes
+        var calculoSemanasMensal= (calculoTotalSemana * (22/5)) // 22 = total de dias úteis
                                                                     // 5 = total de dias úteis em uma semana
-        var calculo3= Number((in_tempoF.value) *(in_consultaF.value))*200
+        var calculoTotalAno= calculoTotalSemana * (264/5) // 264 = dias úteis no ano, de acordo com as semanas de 5 dias
+                                                        // 5 = dias úteis semanais
+        var calculoTotalHorasAno = calculoTotalAno/60 // transformando minutos em horas
+        
+        // calculos SPMonitore
+        var calculoTotalSemanaSPMonitore = Number (0.5 * vezes)
+        var calculoSemanasMensalSPMonitore = (calculoTotalSemanaSPMonitore *(22/5))
+        var calculoTotalAnoSPMonitore = (calculoTotalSemanaSPMonitore * (264/5))
+        var calculoTotalHorasAnoSPMonitore = (calculoTotalAnoSPMonitore/60)
+
+        // calculo final de economia de tempo
+        var calculoFinalPorcentagem = (calculoTotalAnoSPMonitore / calculoTotalAno) *100 
 
         div_resultado1.innerHTML = 
         `Sua perda de tempo equivale a <br>
         <b>${calculoTotalSemana}</b>minutos/por semana, <br> 
-        <b>${calculoSemanasMensal}</b>minutos/por mês,  <br> 
-        <b>${calculoTotalSemana*(264/5)}</b>minutos/por ano.  <br>
-        Anualmente, <b>${(calculo3/60).toFixed(0)}</b> horas/por ano.` 
+        <b>${calculoSemanasMensal.toFixed(0)}</b>minutos/por mês,  <br> 
+        <b>${calculoTotalAno}</b>minutos/por ano.  <br>
+        Anualmente, <b>${(calculoTotalHorasAno).toFixed(0)}</b> horas/por ano.` 
         
         div_resultado2.innerHTML = `<br> Sabendo que leva cerca de <b>30 segundos</b> para
         consultar o sistema da <i><b>SPMonitore</b></i>,
-        a sua <b>economia de tempo</b> será de <b> ${(Number (in_tempoF.value)*100)/0.5}%</b>.` 
-        // realizar os mesmos cálculos para chegar no valor anual utilizando meio minuto (0.5)
-        // calculoTotalAnoSPMoniore / calculoTotalAno *100
+        a sua <b>economia de tempo</b> será de <b> ${(calculoFinalPorcentagem)}%</b>.` 
+    
         div_resultado3.innerHTML = `<br>
         Monitorar espaços é ganhar tempo. <br>
         Ganhar tempo é ganhar satisfação. <br>
         Pessoas satisfeitas são pessoas mais produtivas! :)`
     }
-    function projeto() {
-        
 
-    }
-    function enviar() {
-
-    } 
 </script>
 
