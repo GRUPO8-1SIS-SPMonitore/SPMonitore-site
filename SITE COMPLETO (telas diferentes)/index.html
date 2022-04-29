@@ -71,7 +71,7 @@
       <br>
       <br>
       <br>
-      <button id="btn-sectionA">Nosso projeto</button>
+      <button id="btn-sectionA" onclick="projeto()">Nosso projeto</button>
     </div>
   </div>
 
@@ -282,7 +282,7 @@
             <input placeholder="Email:" type="text" id="in_email"> <br>
             <input placeholder="Telefone:" type="text" id="in_tel"> <br>
             <input placeholder="Mensagem:" type="text" id="in_msg"> <br>
-            <button class="btnCont">Enviar</button> <br>
+            <button class="btnCont" onclick="enviar()">Enviar</button> <br>
         </div>
         <div class="textoCont">
             <h1 class="fraseCont">Entre em Contato</h1>
@@ -299,7 +299,7 @@
         <h1 class="titulo1">SEUS ESPAÇOS COM MAIS EFICIÊNCIA E CONTROLE</h1>
         <h1 class="titulo2">CONHEÇA NOSSO PROJETO</h1>
         <div class="baixo">
-            <button class="btn_projeto">NOSSO PROJETO<br>
+            <button class="btn_projeto" onclick="projeto()">NOSSO PROJETO<br>
             </div>
      </div>
     </div>
@@ -324,24 +324,34 @@
         // utilizamos o toFixed e o Number
         var minutos=Number (in_tempoF.value)
         var vezes= Number(in_consultaF.value)
-        var calculo= Number(in_tempoF.value) *(in_consultaF.value)
+        var calculoTotalSemana= Number(in_tempoF.value) *(in_consultaF.value)
+        var calculoSemanasMensal= Number (calculoTotalSemana * (22/5)) // 22 = total de dias úteis
+                                                                    // 5 = total de dias úteis em uma semana
         var calculo3= Number((in_tempoF.value) *(in_consultaF.value))*200
 
         div_resultado1.innerHTML = 
         `Sua perda de tempo equivale a <br>
-        <b>${calculo}</b>minutos/por semana, <br> 
-        <b>${calculo*22}</b>minutos/por mês,  <br> 
-        <b>${calculo*200}</b>minutos/por ano.  <br>
+        <b>${calculoTotalSemana}</b>minutos/por semana, <br> 
+        <b>${calculoSemanasMensal}</b>minutos/por mês,  <br> 
+        <b>${calculoTotalSemana*(264/5)}</b>minutos/por ano.  <br>
         Anualmente, <b>${(calculo3/60).toFixed(0)}</b> horas/por ano.` 
         
         div_resultado2.innerHTML = `<br> Sabendo que leva cerca de <b>30 segundos</b> para
         consultar o sistema da <i><b>SPMonitore</b></i>,
         a sua <b>economia de tempo</b> será de <b> ${(Number (in_tempoF.value)*100)/0.5}%</b>.` 
-        
+        // realizar os mesmos cálculos para chegar no valor anual utilizando meio minuto (0.5)
+        // calculoTotalAnoSPMoniore / calculoTotalAno *100
         div_resultado3.innerHTML = `<br>
         Monitorar espaços é ganhar tempo. <br>
         Ganhar tempo é ganhar satisfação. <br>
         Pessoas satisfeitas são pessoas mais produtivas! :)`
     }
+    function projeto() {
+        
+
+    }
+    function enviar() {
+
+    } 
 </script>
 

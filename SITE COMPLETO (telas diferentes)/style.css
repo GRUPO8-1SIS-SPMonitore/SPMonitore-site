@@ -6,7 +6,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    width: 100vw;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
@@ -231,7 +231,7 @@ body{
 
 .containerc {
    width: 100%;
-   height: 90vh;
+   height: 90%;
    padding: 6%;
 }
 
@@ -292,7 +292,7 @@ body{
 
 .containerd{
     width: 100%;
-    height: 90vh;
+    height: 90%;
     padding: 6%;
 }
 
@@ -370,6 +370,7 @@ body{
     width: 100%;
     height: 100%;
     padding-top: 3%;
+    margin-bottom: 5%;
 }
 .div1E {
     gap: 10px;
@@ -438,7 +439,7 @@ body{
 .sectionF {
     background-color: black;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     font-size: 10px;
     align-items: center;
     padding-top: 8%;
@@ -753,4 +754,513 @@ footer {
         margin-left: 0%;
         text-align: center;
         align-items: flex-start;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2%;
+    padding-right: 3%; 
+    width: 100%;   
+}
+
+.opcoes{
+    display: flex;
+    gap: 3rem;
+
+}
+
+.menu .logo{
+    height: 50px; 
+    margin-left: 2%;
+}
+
+.btn_entrar {     
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    width: 130px;
+    font-weight: 400;
+}
+
+.btn_login{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    width: 130px;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    padding: 1%;
+    width: 100px;
+    margin-right: 2%;
+    font-size: 18px;
+}
+
+.sectionA{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('imagens/FundoHome.jpg');
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.container-txt{
+    margin-top:12%;
+    margin-left: 5%;
+}
+
+#title-home{
+    color: whitesmoke;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+#txt-home{
+    color: whitesmoke;
+    font-size: 24px;
+    margin-top: 10%;
+    font-weight: 400;
+}
+
+#btn-sectionA{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    width: 220px;
+}
+
+/*página 2*/
+/*Css da section B*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size:100%;
+    background: #131313;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.conteudo1{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 5rem;
+    padding-top: 5rem;
+}
+
+.titulo{
+    color: whitesmoke;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.paragrafro{
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+.conteudo2{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 300px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 8%;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.flipinner{
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    border: white solid 0.4px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .flipinner {
+    transform: rotateY(180deg);
+  }
+
+  .frontcard, .backcard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  .frontcard {
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    border: white solid 0.4px;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .backcard {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    border: white solid 0.4px;
+    height: 100%;
+    justify-content: center;
+  }
+
+.detalhe-txt{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+  .detalhe{
+      width: 50px;
+      height: 3px;
+      background-color: #B02CE8;
+  }
+
+  .content-card{
+      margin-top: 10%;
+      width: 100%;
+      height: 200px;
+  }
+
+  .icone{
+      width: 100px;
+      height: 100px;
+      margin-top: 15%;
+      align-items: center;
+      fill: whitesmoke;
+  }
+
+/*css do login*/
+
+.section-Login{
+    background-repeat: no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('imagens/FundoHome.jpg');
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.container-pagina{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  .container-login{
+      width: 80%;
+      height: 90vh;
+      background-color: rgb(255, 255, 255);
+      margin-top: 7%;
+      margin-bottom: 10%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+  }
+
+
+  .logo2{
+      height: 50px;
+      width: 50px;
+      margin-top: 3%;
+      margin-left: 3%;
+  }
+
+  .forms-login{
+      width: 60%;
+      height: 100%;
+      background-color: #131313;
+  }
+
+.img-login{
+    width: 40%;
+    height: 100%;
+    background-color: #003851;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title-login{
+    margin-top: 10%;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#txt-login{
+    margin-top: 10%;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-size: 18px;
+    width: 90%;
+    text-align: center;
+}
+
+.img-svg{
+    width: 60%;
+    margin-top: 10%;
+}
+
+.formularioA{
+    width: 100%;
+    height: 40%;
+    padding-top: 3%;
+    padding-left: 3%;
+}
+
+.txt-form-login{
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;   
+}
+
+.in-form-login{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    padding-left: 3%;
+    width: 95%;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #B02CE8;
+}
+
+.formularioB{
+    width: 100%;
+    height: 5%;
+    padding-left: 3%;
+    display: flex;
+    flex-direction: row;
+}
+
+#box-usuario{
+    border: 2px solid #B02CE8;
+    margin-top: 1%;    
+}
+
+#Lembrar{
+    margin-left: 2%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#forgotPass{
+    margin-left: 45%;
+    color: rgb(33, 120, 179);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.botao{
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+#btn-login{
+    width: 40%;
+    height: 35px;
+    color: white;
+    font-weight: 800;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    text-align: center;
+    padding: auto;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #003366, #B02CE8);
+}
+
+.formularioC{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#txt-1{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 4%;
+    width: 35%;
+}
+
+#txt-2{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+    text-align: right;
+    margin-right: 3%;
+}
+
+#link-txt{
+    font-size: 15px;
+    font-weight: 600;
+    color: #2178B3;
+    text-decoration: none;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.dash{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+   }
+
+.top{
+    display: inline-flex;
+    margin-top: 3%;
+    width: 80%;
+    gap: 80%;
+    margin-bottom: 15%;
+}
+
+.title-dashboard{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: bolder;
+}
+
+.select-dash{
+    background-color: #B02CE8;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.select:hover{
+    background-color: black;
+}
+
+.container-grafico{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    padding: auto;
+}
+
+.div_grafico{
+    width: 80%;
+    background-color: #363636;
+    border-radius: 15px;
+}
+
+.alertas{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.alert{
+    width: 15%;
+    height: 15%;
+    background-color: white;
+
+}
+
+.title-grafico{
+    color: white;
+    font-size: 24px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
