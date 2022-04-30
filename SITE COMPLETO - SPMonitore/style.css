@@ -638,7 +638,7 @@ body{
 .bannerfinal{
     margin-top: 5%;
     width: 100%;
-    height: 80%;
+    height: 650px;
     justify-content: center;
     align-items: center;
     padding-left: 2%;
@@ -676,7 +676,7 @@ body{
 
 .btn_projeto{
         margin-top: 45px;
-        margin-left: 40.5%;
+        margin-left: 38.6%;
         margin-top: 35px;
         border: 2;
         font-weight: 550;
@@ -690,7 +690,7 @@ body{
 
 .btn_volta{
         margin-top: 35px;
-        margin-left: -1.5%;
+        margin-left: 2.3%;
         border: 2;
         font-weight: 550;
         background-color:transparent;
@@ -703,59 +703,26 @@ body{
    
 footer {
     position: bottom;
-    background-color: black ;
+    background-color:#131313 ;
     color: white;
     width: 100%;
-    height: 23%;    
+    height: 27%;    
     text-align: center;
-    line-height: 100px;
+    line-height: 70px;
 }
 .titulo4{
         display: flex;
         color: white;
-        font-size: 15px;
-        height: 40px;
-        width: 100%;
+        font-size: 14px;
+        height: 50px;
+        width: 24%;
         margin-top:  -8%;
         margin-left: 0%;
         text-align: center;
         align-items: flex-start;
-}
-.titulo5{
-        display: flex;
-        color: white;
-        font-size: 15px;
-        height: 40px;
-        width: 100%;
-        margin-top:  -1%;
-        margin-left: 0%;
-        text-align: center;
-        align-items: flex-start;
- }
-
- .titulo6{
-        display: flex;
-        color: white;
-        font-size: 15px;
-        height: 40px;
-        width: 100%;
-        margin-top:  -1%;
-        margin-left: 0%;
-        text-align: center;
-        align-items: flex-start;
+        line-height: 50px;
 }
 
-.titulo7{
-        display: flex;
-        color: white;
-        font-size: 15px;
-        height: 40px;
-        width: 100%;
-        margin-top:  -1%;
-        margin-left: 0%;
-        text-align: center;
-        align-items: flex-start;
-}
 
 body{
     margin: 0;
