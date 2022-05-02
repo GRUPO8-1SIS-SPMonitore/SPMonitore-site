@@ -1,233 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMonitore</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
-    <style>
-        canvas {
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-        }
-    </style>
+    <link rel="stylesheet" href="copia.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <!-- colocar tela home antes dos dashboards-->
-    
+
     <section class="dash">
-        <div class="top">
-            <h2 class="title-dashboard">Monitoramento em tempo real</h2>  
-            <select class="select-dash" id="sel_espaco">
-                <option value="">Biblioteca</option>
-                <option value="">Spacebreak-1</option>
-                <option value="">Spacebreak-2</option>
-                <option value="">Sala de jogos</option>
-            </select>
+        <div class="esquerda">
+            <h3>Espaços monitorados</h3>
+
+                <div class="button">
+                    Biblioteca
+                </div>
+
+                <div class="button">
+                    Space break 1
+                </div>
+
+                <div class="button">
+                    Space break 2
+                </div>
+
+                <div class="button">
+                    Sala de jogos
+                </div>
+
         </div>
-        <div class="alertas">
-            <div class="alert">
 
-            </div>
-            <div class="alert">
 
-            </div>
-            <div class="alert">
+        <div class="direita">
+            <div class="container-grafico">
+                <div class="alertas">
+                    <div class="alert">
+                        Biblioteca
+                    </div>
+                    <div class="alert">
+                        SpaceBreak1
+                    </div>
+                    <div class="alert">
+                        SpaceBreak2
+                    </div>
+                    <div class="alert">
+                        jogos
+                    </div>
+                </div>
 
-            </div>
-            <div class="alert">
+                <div class="divisoria">
+                    <div class="grafico-esq">
+                        <h1 class="title-grafico">Biblioteca</h1>
+                        <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
+                            <canvas id="Biblioteca"></canvas>
+                        </div>
+                        <h1 class="title-grafico">Space break 1</h1>
+                        <div class="div_grafico"  style="position: relative; height:20vh; width:20vw">
+                            <canvas id="space1"></canvas>
+                        </div>
+                    </div>
 
+                    <div class="grafico-dir">
+                        <h1 class="title-grafico">Space break 2</h1>
+                        <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
+                            <canvas id="space2"></canvas>
+                        </div>
+                        <h1 class="title-grafico">Sala de jogos</h1>
+                        <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
+                            <canvas id="jogos"></canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="container-grafico">
-            <h1 class="title-grafico">Biblioteca</h1>
-            <div class="div_grafico" style="width:100%">
-                <canvas id="dht11Umidade"></canvas>
-            </div>
-            <h1 class="title-grafico">Space break 1</h1>
-            <div class="div_grafico" style="width: 100%;">
-                <canvas id="dht11Temperatura"></canvas>
-            </div>
-            <h1 class="title-grafico">Space break 2</h1>
-            <div class="div_grafico" style="width: 100%;">
-                <canvas id="luminosidade"></canvas>
-            </div>
-            <h1 class="title-grafico">Sala de jogos</h1>
-            <div class="div_grafico" style="width: 100%;">
-                <canvas id="lm35Temperatura"></canvas>
-            </div>
-        </div>
-        
     </section>
 </body>
+
 </html>
-<script>
+
     /* -- dht11Umidade -- */
-    var contextoDht11Umidade = document.getElementById('dht11Umidade').getContext('2d');
-    contextoDht11Umidade.canvas.width = 1000;
-    contextoDht11Umidade.canvas.height = 300;
-    var dht11Umidade = new Chart(
-        contextoDht11Umidade,
-        {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: 'Movimentação',
-                    type: 'line',
-                    borderColor: ['#003366'],
-                    backgroundColor: ['#b02ce8']
-                }]
-            },
-            options: {
-                scales: {
-                    xAxes: [{
-                        distribution: 'series',
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Movimentação'
-                        },
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                animation: {
-                    duration: 0
-                }
-            }
-        }
+    <script>
+    const labels = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+    ];
+  
+    //Biblioteca
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Biblioteca',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [0, 10, 5, 2, 20, 30, 45],
+      }]
+    };
+
+    //SpaceBreak 1
+    const data1 = {
+      labels: labels,
+      datasets: [{
+        label: 'Space Break 1',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [0, 0, 5, 2, 0, 0, 5],
+      }]
+    };
+
+    //SpaceBreak 2
+    const data2 = {
+      labels: labels,
+      datasets: [{
+        label: 'Space Break 2',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [5, 0, 5, 2, 5, 5, 5],
+      }]
+    };
+  
+    //Sala de jogos
+    const data3 = {
+      labels: labels,
+      datasets: [{
+        label: 'Sala de jogos',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [3, 0, 10, 2, 0, 0, 5],
+      }]
+    };
+
+    //Biblioteca
+    const config = {
+      type: 'line',
+      data: data,
+      options: {}
+    };
+
+    //SpcaeBreak1
+    const config1 = {
+      type: 'line',
+      data: data1,
+      options: {}
+    };
+
+    //SpaceBreak2
+    const config2 = {
+      type: 'line',
+      data: data2,
+      options: {}
+    };
+
+    //Sala de jogos
+    const config3 = {
+      type: 'line',
+      data: data3,
+      options: {}
+    };
+  </script>
+
+<script>
+    //Biblioteca
+    const myChart = new Chart(
+      document.getElementById('Biblioteca'),
+      config
     );
-    /* -- dht11Temperatura -- */
-    var contextoDht11Temperatura = document.getElementById('dht11Temperatura').getContext('2d');
-    contextoDht11Temperatura.canvas.width = 1000;
-    contextoDht11Temperatura.canvas.height = 300;
-    var dht11Temperatura = new Chart(
-        contextoDht11Temperatura,
-        {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: "Quantidade de pessoas",
-                    type: 'line',
-                    borderColor: ['#003366'],
-                    backgroundColor: ['#b02ce8']
-                }]
-            },
-            options: {
-                scales: {
-                    xAxes: [{
-                        distribution: 'series',
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Quantidade de pessoas'
-                        },
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                animation: {
-                    duration: 0
-                }
-            }
-        }
+
+        //SpaceBreak1
+    const space1 = new Chart(
+      document.getElementById('space1'),
+      config1
     );
-    /* -- luminosidade -- */
-    var contextoLuminosidade = document.getElementById('luminosidade').getContext('2d');
-    contextoLuminosidade.canvas.width = 1000;
-    contextoLuminosidade.canvas.height = 300;
-    var luminosidade = new Chart(
-        contextoLuminosidade,
-        {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: 'Quantidade de pessoas',
-                    type: 'line',
-                    borderColor: ['#003366'],
-                    backgroundColor: ['#b02ce8']
-                }]
-            },
-            options: {
-                scales: {
-                    xAxes: [{
-                        distribution: 'series',
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Quantidade de pessoas'
-                        },
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                animation: {
-                    duration: 0
-                }
-            }
-        }
+
+        //SpaceBreak 2
+    const space2 = new Chart(
+      document.getElementById('space2'),
+      config2
     );
-    /* -- lm35Temperatura */
-    var contextoLm35Temperatura = document.getElementById('lm35Temperatura').getContext('2d');
-    contextoLm35Temperatura.canvas.width = 1000;
-    contextoLm35Temperatura.canvas.height = 300;
-    var lm35Temperatura = new Chart(
-        contextoLm35Temperatura,
-        {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: 'Quantidade de pessoas',
-                    type: 'line',
-                    borderColor: ['#003366'],
-                    backgroundColor: ['#b02ce8']
-                }]
-            },
-            options: {
-                scales: {
-                    xAxes: [{
-                        distribution: 'series',
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Quantidade de pessoas'
-                        },
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                animation: {
-                    duration: 0
-                }
-            }
-        }
+
+        //Sala de jogos
+    const jogos = new Chart(
+      document.getElementById('jogos'),
+      config3
     );
-</script>
+  </script>
+
 
 <!-- tela de relatórios com dashboards de média e horários de menos fluxo
 nos espaços. 
