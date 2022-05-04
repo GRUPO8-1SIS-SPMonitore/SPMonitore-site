@@ -86,7 +86,7 @@
         <h3 class="paragrafro">Providenciando</h3>
         <h3 class="paragrafro">O melhor</h3>
     </section>
-    <main class="conteudo2-B">
+    <main class="conteudo2">
         <section class="cards">
             <div class="card">
                 <div class="flipinner">
@@ -346,7 +346,6 @@
 
     </section>
     <!--Section D-->
-    
 
     <section class="sectiond">
         <div class="containerd">
@@ -357,12 +356,12 @@
             <div class="titulod">
                 <h1 class="title2">Envolvidos no Projeto</h1>
             </div>
-            <main class="conteudo2-D">
-                <section class="cards2">
+            <main class="conteudo2">
+                <section class="cards">
                     <div class="card">
                         <div class="flipinnerx">
                             <div class="frontcard">
-                                <img class="fotoArthur" src="imagens/Arthur123.png" alt="">
+                                imagem
                             </div>
                             <div class="backcardx">
                                 Arthur Felix <br> Time
@@ -415,7 +414,7 @@
                 <div class="detalheE"></div>
             </div>
             <div class="div2E">
-                <h2 class="paragrafoE">Conhecendo o<br> Projeto</h2>
+                <h2 class="paragrafoE">Conhecendo <br> Projeto</h2>
             </div>
             <div class="containerE">
                 <div class="divimgE">
@@ -448,13 +447,13 @@
     <section id="SectionF" class="sectionF">
         <div class="bannerF">
             <div class="formsF">
-                <span class="title1F">Como isso afeta meu espaço e tempo?</span>
-                <span class="title2F">Calcule e confira aqui o quanto você pode economizar!</span>
-                <h1 class="perguntas1">Quanto tempo de locomoção entre os espaços?</h1>
+                <span class="title1F">COMO ISSO AFETA MEU ESPAÇO E O MEU TEMPO?</span> <br>
+                <span class="title2F">Calcule e confira o quanto você pode economizar!</span>
+                <h1 class="perguntasF">Quanto tempo de locomoção entre os espaços?</h1>
                 <input placeholder="Tempo (minutos)" type="text" id="in_tempoF">
-                <h1 class="perguntas2">Quantas consultas aos espaços você faz durante a semana?</h1>
-                <input placeholder="Consultas (por semana)" type="text" id="in_consultaF"> 
-                <button class="btnF" onclick="calcular()">Calcular</button> <br>
+                <h1 class="perguntasF">Quantas consultas aos espaços você faz durante a semana?</h1>
+                <input placeholder="Consultas (por semana)" type="text" id="in_consultaF"> <br>
+                <button class="btnF" onclick="calcular()">CALCULAR</button> <br>
             </div>
             <div class="resultadoF">
                 <div id="div_resultado1"></div>
@@ -469,15 +468,16 @@
     <section id="Contato" class="sectionContato">
         <div class="bannerCont">
             <div class="formsCont">
-                <input placeholder="Nome:" type="text" id="in_nome">
-                <input placeholder="Email:" type="text" id="in_email">
-                <input placeholder="Telefone:" type="text" id="in_tel">
-                <input placeholder="Mensagem:" type="text" id="in_msg">
-                <button class="btnCont" onclick="enviar()">Enviar</button>
+                <input placeholder="Nome:" type="text" id="in_nome"> <br>
+                <input placeholder="Email:" type="text" id="in_email"> <br>
+                <input placeholder="Telefone:" type="text" id="in_tel"> <br>
+                <input placeholder="Mensagem:" type="text" id="in_msg"> <br>
+                <button class="btnCont" onclick="enviar()">Enviar</button> <br>
             </div>
             <div class="textoCont">
                 <h1 class="fraseCont">Entre em Contato</h1>
-                <h3 id="txt-contato">Alguma dúvida ou interesse em nossos serviços? Nos mande uma mensagem!</h3>
+                <h3>Alguma dúvida ou interesse em nossos serviços? <br>
+                    Nos mande uma mensagem!</h3>
                 <img class="img3" src="imagens/Contact us-cuate (1).svg" alt="">
             </div>
         </div>
@@ -533,13 +533,6 @@
         // calculo final de economia de tempo
         var calculoFinalPorcentagem = (calculoTotalAnoSPMonitore / calculoTotalAno) * 100
 
-        if (minutos == '' || vezes == '') {
-            alert (`Não é possível continuar. Insira algum dado.`)
-        div_resultado1.innerHTML == ""
-        div_resultado2.innerHTML == ""
-        div_resultado3.innerHTML == ""
-        }
-        if (minutos >0 && vezes >0) {
         div_resultado1.innerHTML =
             `Sua perda de tempo equivale a <br>
         <b>${calculoTotalSemana}</b>minutos/por semana, <br> 
@@ -555,20 +548,6 @@
         Monitorar espaços é ganhar tempo. <br>
         Ganhar tempo é ganhar satisfação. <br>
         Pessoas satisfeitas são pessoas mais produtivas! :)`
-        }
-    }
-    function enviar() {
-        // depois do alerta de mensagem enviada, como faz pra limpar os inputs?
-        var nome = in_nome.value
-        var email = in_email.value
-        var tel = in_tel.value
-        var msg = in_msg.value
-        if (nome == ""|| email == ""|| tel == ""|| msg =="") {
-            alert (`Não é possível continuar. Insira algum dado.`)
-        }
-        else {
-            alert (`Obrigada por nos contatar. Aguarde nosso retorno pelo email ou telefone.`)
-        }
     }
 
 </script>

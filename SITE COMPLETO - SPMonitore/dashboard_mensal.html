@@ -77,20 +77,20 @@
     <div class="esquerda">
       <h3 class="dash-title">Espaços monitorados</h3>
 
-      <div class="button">
-        Biblioteca
+      <div class="button" style="background-image: linear-gradient(to bottom, #003366, #B02CE8);">
+        Tempo real
       </div>
 
-      <div class="button">
-        Space break 1
+      <div class="button" style="background-image: linear-gradient(to bottom, #003366, #B02CE8);">
+        Semanal
       </div>
 
-      <div class="button">
-        Space break 2
+      <div class="button" style="background-image: linear-gradient(to bottom, #003366, #B02CE8);">
+        Mensal
       </div>
 
-      <div class="button">
-        Sala de jogos
+      <div class="button" style="background-image: linear-gradient(to bottom, #003366, #B02CE8);">
+        Anual
       </div>
 
     </div>
@@ -98,17 +98,25 @@
 
     <div class="direita">
       <div class="alertas">
-        <div class="alert">
+        <div class="alert" style="background-color: green;">
           Biblioteca
+          uso frequente
+          50%
         </div>
-        <div class="alert">
+        <div class="alert" style="background-color: orange;">
           SpaceBreak1
+          Muito frequentado
+          80%
         </div>
-        <div class="alert">
+        <div class="alert" style="background-color: red;">
           SpaceBreak2
+          Ocioso
+          3%
         </div>
-        <div class="alert">
-          jogos
+        <div class="alert" style="background-color: red;">
+          Jogos 
+          Lotado
+          95%
         </div>
       </div>
       <div class="container-grafico">
@@ -147,12 +155,13 @@
 /* -- dht11Umidade -- */
 <script>
   const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
   ];
 
   //Biblioteca
@@ -162,7 +171,7 @@
       label: 'Biblioteca',
       backgroundColor: 'rgb(176, 44, 232)',
       borderColor: 'rgb(176, 44, 232)',
-      data: [0, 10, 5, 2, 20, 30, 45],
+      data: [23, 20,25, 28, 30, 28, 30],
     }]
   };
 
@@ -173,7 +182,7 @@
       label: 'Space Break 1',
       backgroundColor: 'rgb(176, 44, 232)',
       borderColor: 'rgb(176, 44, 232)',
-      data: [0, 0, 5, 2, 0, 0, 5],
+      data: [50, 60, 57, 58, 62, 59, 60],
     }]
   };
 
@@ -184,7 +193,7 @@
       label: 'Space Break 2',
       backgroundColor: 'rgb(176, 44, 232)',
       borderColor: 'rgb(176, 44, 232)',
-      data: [5, 0, 5, 2, 5, 5, 5],
+      data: [32, 20, 5, 2, 5, 5, 5],
     }]
   };
 
@@ -195,7 +204,7 @@
       label: 'Sala de jogos',
       backgroundColor: 'rgb(176, 44, 232)',
       borderColor: 'rgb(176, 44, 232)',
-      data: [3, 0, 10, 2, 0, 0, 5],
+      data: [20, 25, 23, 21, 23, 20, 25],
     }]
   };
 

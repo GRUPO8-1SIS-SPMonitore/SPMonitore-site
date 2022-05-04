@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPMonitore</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <!-- colocar tela home antes dos dashboards-->
+  <div class="sectionA">
+    <header class="menu">
+
+        <svg class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50px " height="50px" viewBox="0 0 50 50">
+                <g id="Grupo_4" data-name="Grupo 4" transform="translate(-47.5 -41.461)">
+                    <g id="Componente_3_1" data-name="Componente 3 – 1" transform="translate(47.5 41.461)">
+                        <path id="Caminho_354" data-name="Caminho 354"
+                            d="M21.558,0A21.813,21.813,0,0,1,43.115,22.06a21.813,21.813,0,0,1-21.558,22.06A21.813,21.813,0,0,1,0,22.06,21.813,21.813,0,0,1,21.558,0Z"
+                            transform="translate(3.508 2.621)" fill="#003851" />
+                        <path id="Caminho_1" data-name="Caminho 1"
+                            d="M15.62,0a15.738,15.738,0,0,1,15.62,15.853A15.738,15.738,0,0,1,15.62,31.707,15.738,15.738,0,0,1,0,15.853,15.738,15.738,0,0,1,15.62,0Z"
+                            transform="translate(9.446 9.098)" fill="#d09ee5" />
+                        <ellipse id="Elipse_3" data-name="Elipse 3" cx="8.366" cy="8.636" rx="8.366" ry="8.636"
+                            transform="translate(16.699 16.047)" fill="#00759c" />
+                        <line id="Linha_1" data-name="Linha 1" y2="22.042" transform="translate(25.153)" fill="none"
+                            stroke="#fff" stroke-width="2" />
+                        <line id="Linha_5" data-name="Linha 5" x2="17.075" y2="17.153"
+                            transform="translate(26.716 26.793)" fill="none" stroke="#fff" stroke-width="2" />
+                        <line id="Linha_7" data-name="Linha 7" y1="16.454" x2="16.609"
+                            transform="translate(27.182 6.52)" fill="none" stroke="#fff" stroke-width="2" />
+                        <line id="Linha_8" data-name="Linha 8" y1="16.92" x2="16.842"
+                            transform="translate(6.209 27.026)" fill="none" stroke="#fff" stroke-width="2" />
+                        <line id="Linha_6" data-name="Linha 6" x2="17.075" y2="17.153"
+                            transform="translate(6.209 5.821)" fill="none" stroke="#fff" stroke-width="2" />
+                        <line id="Linha_3" data-name="Linha 3" x2="22.353" transform="translate(27.647 25)"
+                            fill="none" stroke="#fff" stroke-width="2" />
+                        <line id="Linha_4" data-name="Linha 4" x2="22.353" transform="translate(0 25)" fill="none"
+                            stroke="#fff" stroke-width="2" />
+                        <line id="Linha_2" data-name="Linha 2" y2="22.042" transform="translate(25.153 27.958)"
+                            fill="none" stroke="#fff" stroke-width="2" />
+                        <ellipse id="Elipse_4" data-name="Elipse 4" cx="3.238" cy="2.969" rx="3.238" ry="2.969"
+                            transform="translate(22.093 21.983)" fill="#01141a" />
+                    </g>
+                </g>
+            </svg>
+
+        </svg>
+
+
+        <nav class="container-box-menu">
+            <a href="">Projetos</a>
+            <a href="">Sobre</a>
+            <a href="">Simulador</a>
+            <a href="">Contato</a>
+            <a href="index.html">Sair</a> <!-- colocar anchor para link de navegação-->
+        </nav>
+    </header>
+
+
+<div class="container-txt">
+  <span id="title-home">Bem-vindo <br> cliente!</span>
+  <br>
+  <br>
+  <span id="txt-home">Acesse os nossos dashboards com <br> o monitoramento em tempo real e relatórios<br> dos seus espaços.</span>
+  <br>
+  <br>
+  <br>
+</div>
+</div>
+
+  <section class="dash">
+    <div class="esquerda">
+      <h3 class="dash-title">Espaços monitorados</h3>
+
+      <div class="button" style="background-image: linear-gradient(to bottom, #003366, #B02CE8);">
+        Tempo real
+      </div>
+
+      <div class="button" style="background-image: linear-gradient(to bottom, #003366, #B02CE8);">
+        Semanal
+      </div>
+
+      <div class="button" style="background-image: linear-gradient(to bottom, #003366, #B02CE8);">
+        Mensal
+      </div>
+
+      <div class="button" style="background-image: linear-gradient(to bottom, #003366, #B02CE8);">
+        Anual
+      </div>
+
+    </div>
+
+
+    <div class="direita">
+      <div class="alertas">
+        <div class="alert" style="background-color: green">
+          Biblioteca
+          vazio
+          5%
+        </div>
+        <div class="alert" style="background-color: red;">
+          SpaceBreak1
+          Lotado
+          100%
+        </div>
+        <div class="alert" style="background-color: orange;">
+          SpaceBreak2
+          Cheio
+          77%
+        </div>
+        <div class="alert" style="background-color: rgb(185, 185, 4);">
+          Jogos
+          Médio
+          20%
+        </div>
+      </div>
+      <div class="container-grafico">
+
+
+        <div class="divisoria">
+          <div class="grafico-esq">
+            <h1 class="title-grafico">Biblioteca</h1>
+            <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
+              <canvas id="Biblioteca"></canvas>
+            </div>
+            <h1 class="title-grafico">Space break 1</h1>
+            <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
+              <canvas id="space1"></canvas>
+            </div>
+          </div>
+
+          <div class="grafico-dir">
+            <h1 class="title-grafico">Space break 2</h1>
+            <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
+              <canvas id="space2"></canvas>
+            </div>
+            <h1 class="title-grafico">Sala de jogos</h1>
+            <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
+              <canvas id="jogos"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
+
+/* -- dht11Umidade -- */
+<script>
+  const labels = [
+    ' 12:00',
+    ' 12:30',
+    ' 13:00',
+    ' 12:30',
+  ];
+
+  //Biblioteca
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Biblioteca',
+      backgroundColor: 'rgb(176, 44, 232)',
+      borderColor: 'rgb(176, 44, 232)',
+      data: [15, 10, 5, 2,],
+    }]
+  };
+
+  //SpaceBreak 1
+  const data1 = {
+    labels: labels,
+    datasets: [{
+      label: 'Space Break 1',
+      backgroundColor: 'rgb(176, 44, 232)',
+      borderColor: 'rgb(176, 44, 232)',
+      data: [50, 30, 10, 5],
+    }]
+  };
+
+  //SpaceBreak 2
+  const data2 = {
+    labels: labels,
+    datasets: [{
+      label: 'Space Break 2',
+      backgroundColor: 'rgb(176, 44, 232)',
+      borderColor: 'rgb(176, 44, 232)',
+      data: [35, 20, 5, 8],
+    }]
+  };
+
+  //Sala de jogos
+  const data3 = {
+    labels: labels,
+    datasets: [{
+      label: 'Sala de jogos',
+      backgroundColor: 'rgb(176, 44, 232)',
+      borderColor: 'rgb(176, 44, 232)',
+      data: [20, 15, 4, 0],
+    }]
+  };
+
+  //Biblioteca
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+
+  //SpcaeBreak1
+  const config1 = {
+    type: 'line',
+    data: data1,
+    options: {}
+  };
+
+  //SpaceBreak2
+  const config2 = {
+    type: 'line',
+    data: data2,
+    options: {}
+  };
+
+  //Sala de jogos
+  const config3 = {
+    type: 'line',
+    data: data3,
+    options: {}
+  };
+</script>
+
+<script>
+  //Biblioteca
+  const myChart = new Chart(
+    document.getElementById('Biblioteca'),
+    config
+  );
+
+  //SpaceBreak1
+  const space1 = new Chart(
+    document.getElementById('space1'),
+    config1
+  );
+
+  //SpaceBreak 2
+  const space2 = new Chart(
+    document.getElementById('space2'),
+    config2
+  );
+
+  //Sala de jogos
+  const jogos = new Chart(
+    document.getElementById('jogos'),
+    config3
+  );
+</script>
+
+
+<!-- tela de relatórios com dashboards de média e horários de menos fluxo
+nos espaços. 
+copia e cola o de cima. -->

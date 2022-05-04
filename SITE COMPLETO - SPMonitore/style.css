@@ -5,7 +5,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* HOME */
 body {
     margin: 0;
     padding: 0;
@@ -109,8 +108,9 @@ a {
 }
 
 
-/*TELA: o que fazemos
-com cards */
+/*Css da section B*/
+
+
 
 * {
     margin: 0;
@@ -144,25 +144,13 @@ body {
     font-size: 45px;
 }
 
-.detalhe-txt {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.detalhe {
-    width: 50px;
-    height: 3px;
-    background-color: #B02CE8;
-}
-
-.conteudo2-B {
+.conteudo2 {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    height: 100%;
+    height: 300px;
 }
 
 .cards {
@@ -234,7 +222,19 @@ body {
 }
 
 
-/*TELA: objetivo (NOSSA EMPRESA*/
+.detalhe-txt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detalhe {
+    width: 50px;
+    height: 3px;
+    background-color: #B02CE8;
+}
+
+/*Rascunho SECTION C*/
 
 .sectionc {
     margin-top: 5%;
@@ -276,11 +276,12 @@ body {
     gap: 10px;
     color: white;
 }
-.title1{
+
+#title1 {
     font-size: 24px;
 }
 
-.title2 {
+#title2 {
     font-size: 45px;
 }
 
@@ -303,8 +304,7 @@ body {
     display: inline;
 }
 
-/*ENVOLVIDOS NO PROJETO
-com cards*/
+/*SECTION D*/
 
 .sectiond {
     height: 100vh;
@@ -319,6 +319,7 @@ com cards*/
 .containerd {
     width: 100%;
     height: 90%;
+    padding: 6%;
 }
 
 .titulod {
@@ -330,24 +331,12 @@ com cards*/
 }
 
 .detalhed {
-    margin-top: 5%;
     display: flex;
     align-items: center;
     gap: 10px;
     color: white;
 }
-.cards2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 5%;
-    height: 100%;
-    width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 2%;
-    padding-bottom: 1%;
-}
+
 .tracod {
     width: 50px;
     height: 3px;
@@ -385,19 +374,16 @@ com cards*/
     transform: rotateX(180deg);
 }
 
-
 .fotoDebora {
     width: 100%;
     height: 100%;
 }
 
-.fotoArthur {
-    width: 100%;
-    height: 100%;
-}
 
 
-/*TELA: por que monitorar (NOSSO PROJETO) */
+/*CSS Section E e F*/
+
+/* INÍCIO SECTION E */
 
 .sectionE {
     background: linear-gradient(to bottom, #003366 0%, #B02CE8 100%);
@@ -450,8 +436,8 @@ com cards*/
     margin-left: 0;
     margin-right: 10%;
     text-align: right;
-}
 
+}
 
 .containerE {
     width: 100%;
@@ -486,7 +472,7 @@ com cards*/
     margin-left: 6%;
 }
 
-/*TELA: simulador */
+/*INÍCIO SECTION F */
 
 .sectionF {
     background-color: black;
@@ -494,93 +480,85 @@ com cards*/
     height: 100%;
     font-size: 10px;
     align-items: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 8%;
 }
 
 .bannerF {
     display: flex;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: white;
     width: 85%;
     height: 90%;
     margin: auto;
+
 }
 
 .formsF {
-    display: flex;
-    flex-direction: column;
     width: 60%;
-    height: 80vh;
+    height: 100%;
     align-items: center;
 }
 
 .title1F {
-    margin-top: 5%;   
+    padding-top: 25vh;
+    padding-left: 5%;
+    padding-bottom: 5%;
     color: black;
-    font-size: 28px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: 900;
 }
 
 .title2F {
-    margin-top: 5%;   
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-bottom: 5%;
     color: black;
     font-size: 20px;
     font-weight: 800;
+
 }
 
-.perguntas1 {
-    font-size: 20px;
-    color: black;
-    font-weight: 600
-}
-
-.perguntas2{
-    font-size: 20px;
-    color: black;
-    font-weight: 600;
-    margin-top: 5%;
-}
-
-#in_tempoF {   
-    border-radius: 5px;
-    border: #B02CE8 solid 2px;
-    background-color: rgb(219, 219, 219);
-    width: 70%;
-    height: 40px;
-    color: black;
-    font-weight: 400;
+.perguntasF {
     font-size: 18px;
-    padding-left: 2%;
-    margin-top: 3%;
+    padding-left: 5%;
+    color: black;
+}
+
+#in_tempoF {
+    margin-left: 8%;
+    padding-left: 8%;
+    border-radius: 10px;
+    border: #B02CE8 solid 2px;
+    background-color: lavender;
+    width: 25vw;
+    height: 6vh;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
 }
 
 #in_consultaF {
-    border-radius: 5px;
+    margin-left: 8%;
+    padding-left: 8%;
+    border-radius: 10px;
     border: #B02CE8 solid 2px;
-    background-color: rgb(219, 219, 219);
-    width: 70%;
-    height: 40px;
+    background-color: lavender;
+    width: 25vw;
+    height: 6vh;
     color: black;
-    font-weight: 400;
-    font-size: 18px;
-    padding-left: 2%;
-    margin-top: 3%;
+    font-weight: 800;
+    font-size: 15px;
 }
 
 .btnF {
+    margin-left: 15%;
     margin-top: 5%;
-    width: 40%;
-    height: 35px;
+    width: 15vw;
+    height: 6.5vh;
+    border-radius: 10px;
+    background-color: #b02ce8;
     color: white;
-    font-weight: 800;
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    border: none;
-    text-align: center;
-    padding: auto;
-    border-radius: 5px;
-    background-color: #B02CE8;
+    font-size: 15px;
 }
 
 .resultadoF {
@@ -588,7 +566,7 @@ com cards*/
     height: 100%;
 
 }
-/*JavaScript*/
+
 #div_resultado1 {
     margin-top: 10px;
     font-size: 15px;
@@ -608,10 +586,9 @@ com cards*/
     color: #b02ce8;
 }
 
-/*TELA: Contato*/
+/*Contato*/
 .sectionContato {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    margin-top: 5%;
     background-color: black;
     width: 100%;
     height: 100%;
@@ -622,94 +599,78 @@ com cards*/
     align-items: center;
     background-color: white;
     width: 85%;
-    height: 90  vh;
+    height: 90%;
     margin: auto;
 }
 
 .formsCont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #003366;
     width: 50%;
-    height: 100%;
+    height: 75%;
     align-items: center;
 }
 
 #in_nome {
-    border-radius: 5px;
-    border: #B02CE8 solid 2px;
-    background-color: rgb(219, 219, 219);
-    width: 70%;
-    height: 40px;
-    color: black;
-    font-weight: 400;
-    font-size: 18px;
+    margin: 5%;
     padding-left: 2%;
-    margin-top: 8%;
+    border-radius: 10px;
+    border: #B02CE8 solid 2px;
+    background-color: lavender;
+    width: 25vw;
+    height: 6vh;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
 }
 
 #in_email {
-    border-radius: 5px;
-    border: #B02CE8 solid 2px;
-    background-color: rgb(219, 219, 219);
-    width: 70%;
-    height: 40px;
-    color: black;
-    font-weight: 400;
-    font-size: 18px;
+    margin: 5%;
     padding-left: 2%;
-    margin-top: 5%;
+    border-radius: 10px;
+    border: #b02ce8 solid 2px;
+    background-color: lavender;
+    width: 25vw;
+    height: 6vh;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
 }
 
 #in_tel {
-    border-radius: 5px;
-    border: #B02CE8 solid 2px;
-    background-color: rgb(219, 219, 219);
-    width: 70%;
-    height: 40px;
-    color: black;
-    font-weight: 400;
-    font-size: 18px;
+    margin: 5%;
     padding-left: 2%;
-    margin-top: 5%;
+    border-radius: 10px;
+    border: #B02CE8 solid 2px;
+    background-color: lavender;
+    width: 25vw;
+    height: 6vh;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
 }
 
 #in_msg {
-    border-radius: 5px;
-    border: #B02CE8 solid 2px;
-    background-color: rgb(219, 219, 219);
-    width: 70%;
-    height: 180px;
-    color: black;
-    font-weight: 400;
-    font-size: 18px;
+    margin: 5%;
     padding-left: 2%;
-    padding-bottom: 23%;
-    margin-top: 5%;
-}
-
-#txt-contato{
-    text-align: left;
-    margin-top: 2%;
-    font-size: 20px;
-    font-weight: 600;
+    padding-top: 0;
+    border-radius: 10px;
+    border: #B02CE8 solid 2px;
+    background-color: lavender;
+    width: 25vw;
+    height: 25vh;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
 }
 
 .btnCont {
     width: 40%;
-    height: 35px;
+    margin-left: 15%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    background-color: #b02ce8;
     color: white;
-    font-weight: 800;
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    border: none;
-    text-align: center;
-    padding: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 5px;
-    background-color: #B02CE8;
+    font-size: 15px;
 }
 
 .textoCont {
@@ -718,7 +679,6 @@ com cards*/
     display: flex;
     flex-direction: column;
     padding-left: 5%;
-    height: 100%;
 }
 
 .fraseCont {
@@ -731,7 +691,7 @@ com cards*/
 
 }
 
-/*TELA FINAL */
+/*SECTION G E H */
 .bannerfinal {
     margin-top: 5%;
     width: 100%;
@@ -822,7 +782,6 @@ footer {
     line-height: 50px;
 }
 
-/* AQUI TEM O CONTEÚDO REPETIDO QUE DÁ INTERFERência, mas nao sei bem aonde.*/
 .menu {
     display: flex;
     align-items: center;
@@ -865,11 +824,73 @@ footer {
     font-weight: 400;
 }
 
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    padding: 1%;
+    width: 100px;
+    margin-right: 2%;
+    font-size: 18px;
+}
+
+.sectionA {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('imagens/FundoHome.jpg');
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
 .container-txt {
     margin-top: 8%;
     margin-left: 5%;
 }
 
+#title-home {
+    color: whitesmoke;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+#txt-home {
+    color: whitesmoke;
+    font-size: 24px;
+    margin-top: 10%;
+    font-weight: 400;
+}
+
+#btn-sectionA {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    width: 220px;
+}
+
+/*página 2*/
+/*Css da section B*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background: #131313;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
 
 .conteudo1 {
     display: flex;
@@ -881,16 +902,22 @@ footer {
 
 .titulo {
     color: whitesmoke;
-    font-size: 24px;
+    font-size: 12px;
     font-weight: 400;
 }
 
-.conteudo2-D {
-    margin-top: 2%;
+.paragrafro {
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+.conteudo2 {
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     width: 100%;
-    height: 55%;
+    height: 300px;
 }
 
 .cards {
@@ -946,6 +973,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: whitesmoke;
     border: white solid 0.4px;
     height: 100%;
     justify-content: center;
@@ -988,7 +1016,7 @@ footer {
     fill: whitesmoke;
 }
 
-/*TELA: cadastro e login*/
+/*css do login*/
 
 .section-Login {
     background-repeat: no-repeat;
@@ -1187,81 +1215,114 @@ footer {
 
 /*CSS Dashboards: tempo real */
 
-/*configuração da HOME daqui já referenciada na HOME principal,  no começo*/
-.dash {
-    height: 100%;
+
+.dash{
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    background-color: #00000000;
+   }
+
+.esquerda{
+    width: 30%;
+    height: 100vh;
+    align-items: center;
+    display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #363636;
+    border-right: #B02CE8 solid 3px;
 }
 
-.top {
-    display: inline-flex;
-    margin-top: 3%;
-    width: 80%;
-    gap: 80%;
-    margin-bottom: 15%;
-}
-
-.title-dashboard {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    font-style: bolder;
-}
-
-.select-dash {
-    background-color: #B02CE8;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 5px;
-}
-
-.select:hover {
-    background-color: black;
-}
-
-.container-grafico {
+.direita{
     width: 70%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: black;
-    padding: auto;
 }
 
-.div_grafico {
-    width: 80%;
+.div_grafico{
+    width: 100%;
     background-color: #363636;
     border-radius: 15px;
 }
 
-.alertas {
+.dash-title{
+    color: white;
+    display: flex;
+    font-size: 32px;
+    font-weight: 400px;
+    margin-top: 10%;
+}
+
+.button {
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    border: white solid 1px;
+    border-radius: 10px;
+    height: 100px;
+    width: 40%;
+    justify-content: center;
+    margin-top: 15%;
+    margin-bottom: 3%;
+    font-size: 24px;
+    font-weight: 400px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.divisoria{
+    display: flex;
+    flex-direction: row;
+}
+
+.grafico-esq{
+    margin-left: 20%;
+}
+
+.grafico-dir{
+    margin-left: 20%;
+}
+
+.container-grafico{
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 10%;
+    padding: 5%;
 }
 
-.alert {
-    width: 15%;
-    height: 15%;
-    background-color: white;
+.alertas{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 30%;
+    width: 100%;
+    gap: 10%;
+    padding: 8%;
+}
 
+.alert{
+    width: 20%;
+    height: 20vh;
+    padding: 5%;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    border: white solid 0.4px;
+    justify-content: center;
 }
 
 .title-grafico {
     color: white;
-    font-size: 24px;
-    margin-top: 5%;
-    margin-bottom: 2%;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 10%;
+    margin-bottom: 5%;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
@@ -1318,5 +1379,3 @@ footer {
     flex-direction: column;
     margin-top: 3%;
 }
-
-
