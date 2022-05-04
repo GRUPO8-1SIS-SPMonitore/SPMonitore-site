@@ -762,25 +762,16 @@ footer {
     display: flex;
     color: white;
     font-size: 14px;
-    height: 50px;
-    width: 24%;
-    margin-top: -8%;
+    height: 40%;
+    width: 25%;
+    margin-top: 1%;
     margin-left: 0%;
     text-align: center;
     align-items: flex-start;
     line-height: 50px;
 }
 
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    width: 100vw;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-}
+/*CSS cadastro/login*/
 
 .menu {
     display: flex;
