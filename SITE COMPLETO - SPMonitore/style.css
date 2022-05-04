@@ -486,13 +486,12 @@ body {
     align-items: center;
     padding-top: 5%;
     padding-bottom: 5%;
-    background-color: red;
 }
 
 .bannerF {
     display: flex;
     align-items: center;
-    background-color: green;
+    background-color: whitesmoke;
     width: 85%;
     height: 90%;
     margin: auto;
@@ -504,7 +503,6 @@ body {
     width: 60%;
     height: 80vh;
     align-items: center;
-    background-color: blue;
 }
 
 .title1F {
@@ -517,51 +515,62 @@ body {
 .title2F {
     margin-top: 5%;   
     color: black;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
 }
 
-.perguntasF {
-    font-size: 18px;
-    padding-left: 5%;
+.perguntas1 {
+    font-size: 20px;
     color: black;
+    font-weight: 600
 }
 
-#in_tempoF {
-    margin-left: 8%;
-    padding-left: 8%;
-    border-radius: 10px;
+.perguntas2{
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    margin-top: 5%;
+}
+
+#in_tempoF {   
+    border-radius: 5px;
     border: #B02CE8 solid 2px;
-    background-color: lavender;
-    width: 25vw;
-    height: 6vh;
+    background-color: rgb(219, 219, 219);
+    width: 70%;
+    height: 40px;
     color: black;
-    font-weight: 800;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 2%;
+    margin-top: 3%;
 }
 
 #in_consultaF {
-    margin-left: 8%;
-    padding-left: 8%;
-    border-radius: 10px;
+    border-radius: 5px;
     border: #B02CE8 solid 2px;
-    background-color: lavender;
-    width: 25vw;
-    height: 6vh;
+    background-color: rgb(219, 219, 219);
+    width: 70%;
+    height: 40px;
     color: black;
-    font-weight: 800;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 2%;
+    margin-top: 3%;
 }
 
 .btnF {
-    margin-left: 15%;
     margin-top: 5%;
-    width: 15vw;
-    height: 6.5vh;
-    border-radius: 10px;
-    background-color: #b02ce8;
+    width: 40%;
+    height: 35px;
     color: white;
-    font-size: 15px;
+    font-weight: 800;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    text-align: center;
+    padding: auto;
+    border-radius: 5px;
+    background-color: #B02CE8;
 }
 
 .resultadoF {
