@@ -2,32 +2,20 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPMonitore</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPMonitore</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </head>
 
 <body>
   <!-- colocar tela home antes dos dashboards-->
 
-    <section class="dash">
-        <div class="esquerda">
-            <h3>Monitoramento em tempo real</h3>
   <section class="dash">
     <div class="esquerda">
-      <h3>Espaços monitorados</h3>
+      <h3 class="dash-title">Espaços monitorados</h3>
 
       <div class="button">
         Biblioteca
@@ -66,53 +54,11 @@
       <div class="container-grafico">
 
 
-        <div class="direita">
-            <div class="container-grafico">
-                <div class="alertas">
-                    <div class="alert">
-                        Biblioteca
-                    </div>
-                    <div class="alert">
-                        Space-Break 1
-                    </div>
-                    <div class="alert">
-                        Space-Break 2
-                    </div>
-                    <div class="alert">
-                        Jogos
-                    </div>
-                </div>
-
-                <div class="divisoria">
-                    <div class="grafico-esq">
-                        <h1 class="title-grafico">Biblioteca</h1>
-                        <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
-                            <canvas id="Biblioteca"></canvas>
-                        </div>
-                        <h1 class="title-grafico">Space break 1</h1>
-                        <div class="div_grafico"  style="position: relative; height:20vh; width:20vw">
-                            <canvas id="space1"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="grafico-dir">
-                        <h1 class="title-grafico">Space break 2</h1>
-                        <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
-                            <canvas id="space2"></canvas>
-                        </div>
-                        <h1 class="title-grafico">Sala de jogos</h1>
-                        <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
-                            <canvas id="jogos"></canvas>
-                        </div>
-                    </div>
-                </div>
-
         <div class="divisoria">
           <div class="grafico-esq">
             <h1 class="title-grafico">Biblioteca</h1>
             <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
               <canvas id="Biblioteca"></canvas>
-
             </div>
             <h1 class="title-grafico">Space break 1</h1>
             <div class="div_grafico" style="position: relative; height:20vh; width:20vw">
@@ -135,29 +81,32 @@
     </div>
   </section>
 </body>
+
 </html>
 
+/* -- dht11Umidade -- */
 <script>
-    const labels = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-    ];
-    //Biblioteca
-    const data = {
-      labels: labels,
-      datasets: [{
-        label: 'Biblioteca',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
-      }]
-    };
+  const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
 
-    // Space Break 1
+  //Biblioteca
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Biblioteca',
+      backgroundColor: 'rgb(176, 44, 232)',
+      borderColor: 'rgb(176, 44, 232)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+
+  //SpaceBreak 1
   const data1 = {
     labels: labels,
     datasets: [{

@@ -762,16 +762,25 @@ footer {
     display: flex;
     color: white;
     font-size: 14px;
-    height: 40%;
-    width: 25%;
-    margin-top: 1%;
+    height: 50px;
+    width: 24%;
+    margin-top: -8%;
     margin-left: 0%;
     text-align: center;
     align-items: flex-start;
     line-height: 50px;
 }
 
-/*CSS cadastro/login*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
 
 .menu {
     display: flex;
@@ -1239,7 +1248,7 @@ body {
     border-radius: 15px;
 }
 
-h3{
+.dash-title{
     color: white;
     display: flex;
     font-size: 32px;
