@@ -361,7 +361,7 @@
                     <div class="card">
                         <div class="flipinnerx">
                             <div class="frontcard">
-                                imagem
+                                <img class="fotos" src="imagens/Arthur123.png" alt="">
                             </div>
                             <div class="backcardx">
                                 Arthur Felix <br> Time
@@ -372,7 +372,7 @@
                     <div class="card">
                         <div class="flipinnerx">
                             <div class="frontcard">
-                                <img class="fotoDebora" src="imagens/fotoDebora.png" alt="">
+                                <img class="fotos" src="imagens/fotoDebora.png" alt="">
                             </div>
                             <div class="backcardx">
                                 Débora Flores <br> Time
@@ -393,10 +393,10 @@
                     <div class="card">
                         <div class="flipinnerx">
                             <div class="frontcard">
-                                imagem
+                                <img class="fotos" src="imagens/ruy.png" alt="">
                             </div>
                             <div class="backcardx">
-                                Ruy Barbosa <br> Time
+                                Ruy Barbosa <br> Fullstack Dev
                             </div>
                         </div>
                     </div>
@@ -447,13 +447,13 @@
     <section id="SectionF" class="sectionF">
         <div class="bannerF">
             <div class="formsF">
-                <span class="title1F">COMO ISSO AFETA MEU ESPAÇO E O MEU TEMPO?</span> <br>
-                <span class="title2F">Calcule e confira o quanto você pode economizar!</span>
-                <h1 class="perguntasF">Quanto tempo de locomoção entre os espaços?</h1>
+                <span class="title1F">Como isso afeta meu espaço e tempo?</span>
+                <span class="title2F">Calcule e confira aqui o quanto você pode economizar!</span>
+                <h1 class="perguntas1">Quanto tempo de locomoção entre os espaços?</h1>
                 <input placeholder="Tempo (minutos)" type="text" id="in_tempoF">
-                <h1 class="perguntasF">Quantas consultas aos espaços você faz durante a semana?</h1>
-                <input placeholder="Consultas (por semana)" type="text" id="in_consultaF"> <br>
-                <button class="btnF" onclick="calcular()">CALCULAR</button> <br>
+                <h1 class="perguntas2">Quantas consultas aos espaços você faz durante a semana?</h1>
+                <input placeholder="Consultas (por semana)" type="text" id="in_consultaF">
+                <button class="btnF" onclick="calcular()">Calcular</button> <br>
             </div>
             <div class="resultadoF">
                 <div id="div_resultado1"></div>
@@ -468,16 +468,15 @@
     <section id="Contato" class="sectionContato">
         <div class="bannerCont">
             <div class="formsCont">
-                <input placeholder="Nome:" type="text" id="in_nome"> <br>
-                <input placeholder="Email:" type="text" id="in_email"> <br>
-                <input placeholder="Telefone:" type="text" id="in_tel"> <br>
-                <input placeholder="Mensagem:" type="text" id="in_msg"> <br>
-                <button class="btnCont" onclick="enviar()">Enviar</button> <br>
+                <input placeholder="Nome:" type="text" id="in_nome">
+                <input placeholder="Email:" type="text" id="in_email">
+                <input placeholder="Telefone:" type="text" id="in_tel">
+                <input placeholder="Mensagem:" type="text" id="in_msg">
+                <button class="btnCont" onclick="enviar()">Enviar</button>
             </div>
             <div class="textoCont">
                 <h1 class="fraseCont">Entre em Contato</h1>
-                <h3>Alguma dúvida ou interesse em nossos serviços? <br>
-                    Nos mande uma mensagem!</h3>
+                <h3 id="txt-contato">Alguma dúvida ou interesse em nossos serviços? Nos mande uma mensagem!</h3>
                 <img class="img3" src="imagens/Contact us-cuate (1).svg" alt="">
             </div>
         </div>
@@ -520,7 +519,8 @@
         var calculoTotalSemana = minutos * vezes
         var calculoSemanasMensal = (calculoTotalSemana * (22 / 5)) // 22 = total de dias úteis
         // 5 = total de dias úteis em uma semana
-        var calculoTotalAno = calculoTotalSemana * (264 / 5) // 264 = dias úteis no ano, de acordo com as semanas de 5 dias
+        var calculoTotalAno = calculoTotalSemana * (264 /
+            5) // 264 = dias úteis no ano, de acordo com as semanas de 5 dias
         // 5 = dias úteis semanais
         var calculoTotalHorasAno = calculoTotalAno / 60 // transformando minutos em horas
 
@@ -549,7 +549,6 @@
         Ganhar tempo é ganhar satisfação. <br>
         Pessoas satisfeitas são pessoas mais produtivas! :)`
     }
-
 </script>
 
 <!--Script do efeito scroll-->
