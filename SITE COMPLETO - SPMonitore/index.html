@@ -532,7 +532,14 @@
 
         // calculo final de economia de tempo
         var calculoFinalPorcentagem = (calculoTotalAnoSPMonitore / calculoTotalAno) * 100
-
+        
+        if (minutos == '' || vezes == '') {
+            alert (`Não é possível continuar. Insira algum dado.`)
+        div_resultado1.innerHTML == ""
+        div_resultado2.innerHTML == ""
+        div_resultado3.innerHTML == ""
+        }
+        if (minutos >0 && vezes >0) {
         div_resultado1.innerHTML =
             `Sua perda de tempo equivale a <br>
         <b>${calculoTotalSemana}</b>minutos/por semana, <br> 
@@ -548,6 +555,21 @@
         Monitorar espaços é ganhar tempo. <br>
         Ganhar tempo é ganhar satisfação. <br>
         Pessoas satisfeitas são pessoas mais produtivas! :)`
+        }
+    }
+
+    function enviar() {
+        // depois do alerta de mensagem enviada, como faz pra limpar os inputs?
+        var nome = in_nome.value
+        var email = in_email.value
+        var tel = in_tel.value
+        var msg = in_msg.value
+        if (nome == ""|| email == ""|| tel == ""|| msg =="") {
+            alert (`Não é possível continuar. Insira algum dado.`)
+        }
+        else {
+            alert (`Obrigada por nos contatar. Aguarde nosso retorno pelo email ou telefone.`)
+        }
     }
 </script>
 
