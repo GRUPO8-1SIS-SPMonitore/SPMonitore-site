@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./function.js">
+    <script src="./function.js"></script>    
     <title>SpMonitore - Login</title>
 </head>
 
@@ -65,7 +67,7 @@
                         negócio! Monitore, adapte e evolua conosco.
                     </span>
                     <div class="img-svg">
-                        <img src="imagens/Tablet login-bro.svg" alt="">
+                        <img src="imagens/cadastro-img.svg" alt="">
                     </div>
                 </div>
                 <div class="forms-cadastro">
@@ -108,15 +110,15 @@
                     </svg><br>
                     <span class="txt-form-cad">Nome:</span><br>
 
-                    <input class="in-form-cad" placeholder="Nome de usuário" type="text" id="nome-cad"><br>
+                    <input class="in-form-cad" placeholder="Nome de usuário" type="text required" id="nome-cad"><br>
                     
                     <span class="txt-form-cad">Email</span><br>
 
-                    <input class="in-form-cad" placeholder="Exemplo@gmail.com" id="email-cad" type="text"><br>
+                    <input class="in-form-cad" placeholder="Exemplo@gmail.com" id="email-cad" type="email"><br>
 
                     <span class="txt-form-cad">Telefone</span><br>
 
-                    <input class="in-form-cad" placeholder="(xx) xxxxx-xxxx" type="text" id="num-cad"><br>
+                    <input class="in-form-cad" placeholder="(xx) xxxxx-xxxx" type="tel" id="num-cad"><br>
 
                     <span class="txt-form-cad">Crie uma senha</span><span id="txt-aviso">Minimo de 8 caracteres</span><br>
 
@@ -124,12 +126,12 @@
 
                     <span class="txt-form-cad">Confirme sua senha</span><br>
 
-                    <input class="in-form-cad" placeholder="Confirme sua senha" type="text" id="conf-senha"><br>
+                    <input class="in-form-cad" placeholder="Confirme sua senha" type="password" id="conf-senha"><br>
 
                     <input type="checkbox" id="box-termos-cad"><span id="termos">Li e aceito os </span><a id="link-cad">Termos e condições</a><br>
 
                     <div class="container-btn">
-                    <button id="btn-login">Entrar</button>
+                    <button id="btn-login"  onclick="Cadastro()" >Entrar</button>
                 </div>    
                 </div>
                 </div>
