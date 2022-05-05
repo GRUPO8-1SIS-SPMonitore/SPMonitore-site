@@ -1269,7 +1269,7 @@ a {
     color: white;
     display: flex;
     font-size: 32px;
-    font-weight: 400px;
+    font-weight: 400;
     margin-top: 10%;
 }
 
@@ -1286,7 +1286,7 @@ a {
     margin-top: 15%;
     margin-bottom: 3%;
     font-size: 24px;
-    font-weight: 400px;
+    font-weight: 400;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -1308,7 +1308,6 @@ a {
     display: flex;
     align-items: center;
     flex-direction: row;
-    padding: 5%;
 }
 
 .alertas{
@@ -1329,7 +1328,7 @@ a {
     display: flex;
     align-items: center;
     color: whitesmoke;
-    border: white solid 0.4px;
+    border: white solid 1px;
     justify-content: center;
 }
 
@@ -1338,7 +1337,6 @@ a {
     font-size: 28px;
     font-weight: 600;
     margin-top: 10%;
-    margin-bottom: 5%;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
