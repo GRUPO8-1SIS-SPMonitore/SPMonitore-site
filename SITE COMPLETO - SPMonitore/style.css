@@ -1327,7 +1327,8 @@ a {
     color: whitesmoke;
     display: flex;
     align-items: center;
-    color: whitesmoke;
+    color: black;
+    font-weight: 800;
     border: white solid 1px;
     justify-content: center;
 }
