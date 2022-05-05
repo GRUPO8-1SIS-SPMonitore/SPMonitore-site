@@ -1238,7 +1238,7 @@ a {
     display: flex;
     align-items: center;
     flex-direction: row;
-    background-color: #00000000;
+    background-color: #003366;
    }
 
 .esquerda{
@@ -1247,7 +1247,7 @@ a {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: #363636;
+    background-color: #000000;
     border-right: #B02CE8 solid 3px;
 }
 
