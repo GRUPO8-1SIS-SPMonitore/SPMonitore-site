@@ -1,53 +1,43 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;" xml:space="preserve">
-<g>
-	<path d="M368.452,0H121.553C91.895,0,67.766,24.13,67.766,53.787v382.436c0,29.658,24.129,53.777,53.787,53.777h246.899
-		c29.657,0,53.782-24.119,53.782-53.777V53.787C422.234,24.13,398.109,0,368.452,0z M401.383,436.223
-		c0,18.153-14.773,32.926-32.931,32.926H121.553c-18.163,0-32.936-14.773-32.936-32.926V53.787
-		c0-18.163,14.773-32.936,32.936-32.936h246.899c18.158,0,32.931,14.773,32.931,32.936V436.223z"/>
-	<path d="M130.319,174.017h229.362V62.553H130.319V174.017z M151.17,83.404h187.66v69.761H151.17V83.404z"/>
-	<rect x="151.562" y="274.362" width="31.277" height="20.851"/>
-	<rect x="229.362" y="274.362" width="31.277" height="20.851"/>
-	<rect x="307.167" y="274.362" width="31.277" height="20.851"/>
-	<rect x="151.562" y="340.479" width="31.277" height="20.851"/>
-	<rect x="229.362" y="340.479" width="31.277" height="20.851"/>
-	<rect x="307.167" y="340.479" width="31.277" height="20.851"/>
-	<rect x="151.562" y="406.596" width="31.277" height="20.851"/>
-	<rect x="229.362" y="406.596" width="31.277" height="20.851"/>
-	<rect x="307.167" y="406.596" width="31.277" height="20.851"/>
-	<rect x="290.713" y="213.764" width="62.553" height="20.851"/>
-	<rect x="136.738" y="213.764" width="62.553" height="20.851"/>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100"
+                            height="100" viewBox="0 0 100 100">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <rect id="Retângulo_1" data-name="Retângulo 1" width="100" height="100"
+                                        transform="translate(440 261)" fill="#d12727" stroke="#707070"
+                                        stroke-width="1" />
+                                </clipPath>
+                            </defs>
+                            <g id="Grupo_de_máscara_1" data-name="Grupo de máscara 1" transform="translate(-440 -261)"
+                                clip-path="url(#clip-path)">
+                                <g id="simulador" transform="translate(440 261)">
+                                    <path id="Caminho_1" data-name="Caminho 1"
+                                        d="M75.194,0H24.807A10.99,10.99,0,0,0,13.83,10.977V89.025A10.988,10.988,0,0,0,24.807,100H75.194A10.987,10.987,0,0,0,86.17,89.025V10.977A10.989,10.989,0,0,0,75.194,0Zm6.721,89.025a6.728,6.728,0,0,1-6.721,6.72H24.807a6.728,6.728,0,0,1-6.722-6.72V10.977a6.729,6.729,0,0,1,6.722-6.722H75.194a6.728,6.728,0,0,1,6.721,6.722V89.025Z"
+                                        fill="#f5f5f5" />
+                                    <path id="Caminho_2" data-name="Caminho 2"
+                                        d="M26.6,35.514H73.4V12.766H26.6Zm4.255-18.492h38.3V31.258h-38.3Z"
+                                        fill="#f5f5f5" />
+                                    <path id="Caminho_37" data-name="Caminho 37" d="M0,0H6.383V4.255H0Z"
+                                        transform="translate(30.931 55.992)" fill="#f5f5f5" />
+                                    <rect id="Retângulo_3" data-name="Retângulo 3" width="6.383" height="4.255"
+                                        transform="translate(46.809 55.992)" fill="#f5f5f5" />
+                                    <path id="Caminho_33" data-name="Caminho 33" d="M0,0H6.383V4.255H0Z"
+                                        transform="translate(62.687 55.992)" fill="#f5f5f5" />
+                                    <path id="Caminho_39" data-name="Caminho 39" d="M0,0H6.383V4.255H0Z"
+                                        transform="translate(30.931 69.486)" fill="#f5f5f5" />
+                                    <path id="Caminho_36" data-name="Caminho 36" d="M0,0H6.383V4.255H0Z"
+                                        transform="translate(46.809 69.486)" fill="#f5f5f5" />
+                                    <path id="Caminho_34" data-name="Caminho 34" d="M0,0H6.383V4.255H0Z"
+                                        transform="translate(62.687 69.486)" fill="#f5f5f5" />
+                                    <rect id="Retângulo_8" data-name="Retângulo 8" width="6.383" height="4.255"
+                                        transform="translate(30.931 82.979)" fill="#f5f5f5" />
+                                    <path id="Caminho_38" data-name="Caminho 38" d="M0,0H6.383V4.255H0Z"
+                                        transform="translate(46.809 82.979)" fill="#f5f5f5" />
+                                    <path id="Caminho_35" data-name="Caminho 35" d="M0,0H6.383V4.255H0Z"
+                                        transform="translate(62.687 82.979)" fill="#f5f5f5" />
+                                    <path id="Caminho_32" data-name="Caminho 32" d="M0,0H12.766V4.255H0Z"
+                                        transform="translate(59.329 43.625)" fill="#f5f5f5" />
+                                    <path id="Caminho_31" data-name="Caminho 31" d="M0,0H12.766V4.255H0Z"
+                                        transform="translate(27.906 43.625)" fill="#f5f5f5" />
+                                </g>
+                            </g>
+                        </svg>

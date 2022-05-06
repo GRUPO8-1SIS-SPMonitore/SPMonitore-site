@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+    <script src="./function.js"></script>  
     <title>SPMonitore</title>
 </head>
 
@@ -112,11 +112,11 @@
                     <div class="formularioA">
                         <span class="txt-form-login">Email:</span><br>
 
-                        <input placeholder="Example@gmail.com" type="email" class="in-form-login"><br>
+                        <input placeholder="Example@gmail.com" type="email" class="in-form-login" id="user_log"><br>
 
                         <span class="txt-form-login">Senha:</span><br>
 
-                        <input placeholder="Inserir senha" type="password" class="in-form-login"><br>
+                        <input placeholder="Inserir senha" type="password" class="in-form-login" id="pass_log"><br>
                     </div>
                     <div class="formularioB">
                         <input type="checkbox" id="box-usuario">
@@ -126,7 +126,7 @@
                         <span id="forgotPass">Esqueceu sua senha?</span><br>
                     </div>
                     <div class="botao">
-                        <button id="btn-login">Entrar</button><br>
+                        <button id="btn-login" onclick="login()">Entrar</button><br>
                     </div>
                     <div class="formularioC">
                         <span id="txt-1">Não possui uma conta?</span>
