@@ -1,7 +1,7 @@
 function cadastro(){
 
-    if(nome_cad.value.length >= 3){
-        var nome = nome_cad.value
+    if(nome_input.value.length >= 3){
+        var nome = nome_input.value
     }else{
         alert('Nome muito curto!')
         return limparCampo()
@@ -13,19 +13,19 @@ function cadastro(){
         return limparCampo()
     }
     
-    if(email_cad.value.indexOf('@') > 0 && email_cad.value.indexOf('.com') > 0){
-        var email = email_cad.value
+    if(email_input.value.indexOf('@') > 0 && email_input.value.indexOf('.com') > 0){
+        var email = email_input.value
     }else{
         alert("Email inválido")
         return limparCampo()
     }
     
-    if(senha_cad.value == conf_senha.value){
-        var senha = conf_senha.value
+    if(senha_input.value == confirmacao_senha_input.value){
+        var senha = confirmacao_senha_input.value
     }else{
         alert("As senhas estão diferentes!")
         return limparCampo()
-    }if(nome_cad.value == "" || email_cad.value == "" || num_cad == "" || senha_cad == "" || conf_senha == ""){
+    }if(nome_input.value == "" || email_input.value == "" || num_cad == "" || senha_input == "" || confirmacao_senha_input == ""){
         alert("É necessário preencher todos os campos!")
         return limparCampo()
     }else{
@@ -34,7 +34,7 @@ function cadastro(){
     }
 }
 
-function login(){
+/* function login(){
     var user = user_log.value
     var pass = pass_log.value
     if(user == 'teste@gmail.com' && pass == '1234'){
@@ -43,14 +43,14 @@ function login(){
         alert('Usuário ou senha incorretos')
         return
     }
-}
+}*/
 
 function limparCampo(){
-    nome_cad.value = "" 
-    email_cad.value = "" 
+    nome_input.value = "" 
+    email_input.value = "" 
     num_cad.value = "" 
-    senha_cad.value = "" 
-    conf_senha.value = ""
+    senha_input.value = "" 
+    confirmacao_senha_input.value = ""
 }
 
                                    

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="./function.js"></script>  
-    <title>SPMonitore</title>
+    <title>SPMonitore - Login</title>
 </head>
 
 <body>
@@ -67,7 +67,7 @@
                     <span id="txt-login">Tenha acesso a nossa plataforma de monitoramento e acesse seus gráficos para
                         monitorar agora seus espaços!</span>
                     <div class="img-svg-login">
-                        <img src="imagens/Login-img.svg" alt="">
+                        <img src="./assets/imgs/Login-img.svg" alt="">
                     </div>
                 </div>
                 <div class="forms-login">
@@ -112,11 +112,11 @@
                     <div class="formularioA">
                         <span class="txt-form-login">Email:</span><br>
 
-                        <input placeholder="Example@gmail.com" type="email" class="in-form-login" id="user_log"><br>
+                        <input placeholder="Example@gmail.com" type="email" class="in-form-login" id="email_input"><br>
 
                         <span class="txt-form-login">Senha:</span><br>
 
-                        <input placeholder="Inserir senha" type="password" class="in-form-login" id="pass_log"><br>
+                        <input placeholder="Inserir senha" type="password" class="in-form-login" id="senha_input"><br>
                     </div>
                     <div class="formularioB">
                         <input type="checkbox" id="box-usuario">
@@ -139,7 +139,69 @@
     </div>
 </body>
 </html>
-<!-- inserir function para validação dos dados inseridos nos inputs
-com alertas
-colocar tag A para navegar entre as telas
-colocar function no botão de entrar para ir para tela de dashboards -->
+<script>
+
+
+    function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+</script>

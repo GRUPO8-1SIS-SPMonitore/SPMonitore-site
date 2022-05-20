@@ -81,7 +81,7 @@ a {
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
-    background: rgba(0, 0, 0, 0.5) url('imagens/FundoHome.jpg');
+    background: rgba(0, 0, 0, 0.5) url('../assets/imgs/FundoHome.jpg');
     background-attachment: fixed;
     position: relative;
     background-size: cover;
@@ -847,7 +847,7 @@ a {
     padding-left: 2%;
     padding-right: 2%;
     display: flex;
-    background: rgba(0, 0, 0, 0.5) url('imagens/cidade1.png');
+    background: rgba(0, 0, 0, 0.5) url('../assets/imgs/cidade1.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
@@ -983,7 +983,7 @@ a {
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
-    background: rgba(0, 0, 0, 0.5) url('imagens/FundoHome.jpg');
+    background: rgba(0, 0, 0, 0.5) url('../assets/imgs/FundoHome.jpg');
     background-attachment: fixed;
     position: relative;
     background-size: cover;
@@ -1036,7 +1036,7 @@ a {
 
 .section-Login {
     background-repeat: no-repeat;
-    background: rgba(0, 0, 0, 0.5) url('imagens/FundoHome.jpg');
+    background: rgba(0, 0, 0, 0.5) url('../assets/imgs/FundoHome.jpg');
     background-attachment: fixed;
     position: relative;
     background-size: cover;

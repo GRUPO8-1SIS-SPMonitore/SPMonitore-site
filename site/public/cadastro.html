@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./function.js"></script>    
-    <title>SpMonitore - Login</title>
+    <title>SpMonitore - Cadastro</title>
 </head>
 
 <body>
@@ -66,7 +66,7 @@
                         negócio! Monitore, adapte e evolua conosco.
                     </span>
                     <div class="img-svg">
-                        <img src="imagens/cadastro-img.svg" alt="">
+                        <img src="./assets/imgs/cadastro-img.svg" alt="">
                     </div>
                 </div>
                 <div class="forms-cadastro">
@@ -109,11 +109,11 @@
                     </svg><br>
                     <span class="txt-form-cad">Nome:</span><br>
 
-                    <input class="in-form-cad" placeholder="Nome de usuário" type="text required" id="nome_cad"><br>
+                    <input class="in-form-cad" placeholder="Nome de usuário" type="text required" id="nome_input"><br>
                     
                     <span class="txt-form-cad">Email</span><br>
 
-                    <input class="in-form-cad" placeholder="Exemplo@gmail.com" id="email_cad" type="email"><br>
+                    <input class="in-form-cad" placeholder="Exemplo@gmail.com" id="email_input" type="email"><br>
 
                     <span class="txt-form-cad">Telefone</span><br>
 
@@ -121,16 +121,16 @@
 
                     <span class="txt-form-cad">Crie uma senha</span><span id="txt-aviso">Minimo de 8 caracteres</span><br>
 
-                    <input class="in-form-cad" placeholder="Senha" type="password" id="senha_cad"><br>
+                    <input class="in-form-cad" placeholder="Senha" type="password" id="senha_input"><br>
 
                     <span class="txt-form-cad">Confirme sua senha</span><br>
 
-                    <input class="in-form-cad" placeholder="Confirme sua senha" type="password" id="conf_senha"><br>
+                    <input class="in-form-cad" placeholder="Confirme sua senha" type="password" id="confirmacao_senha_input"><br>
 
                     <input type="checkbox" id="box-termos-cad"><span id="termos">Li e aceito os </span><a id="link_cad">Termos e condições</a><br>
 
                     <div class="container-btn">
-                    <button id="btn-login"  onclick="cadastro()" >Entrar</button>
+                    <button id="btn-login"  onclick="cadastrar()" >Entrar</button>
                 </div>    
                 </div>
                 </div>
@@ -140,30 +140,20 @@
 
 </body>
 </html>
-    <!-- inserir function para validação dos dados inseridos nos inputs
-com alertas  -->
-
 <script>
     function cadastrar() {
-        aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
-        var telefoneVar = num_cad.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" ||telefonevar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
-            finalizarAguardar();
             return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
         }
 
         // Enviando o valor da nova input
@@ -182,31 +172,26 @@ com alertas  -->
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
-
+            console.log('Oi')
             if (resposta.ok) {
-                cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
+                    console.log('Passou por aqui.')
                     window.location = "login.html";
                 }, "2000")
                 
                 limparFormulario();
-                finalizarAguardar();
+            
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+        
         });
 
         return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-
 </script>
+
