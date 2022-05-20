@@ -1,2 +1,2 @@
 # SPMonitore-site
-Site estático institucional da empresa SPMonitore.
+Site dinâmico institucional da empresa SPMonitore.
