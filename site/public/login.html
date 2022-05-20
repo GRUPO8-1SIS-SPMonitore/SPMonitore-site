@@ -126,7 +126,7 @@
                         <span id="forgotPass">Esqueceu sua senha?</span><br>
                     </div>
                     <div class="botao">
-                        <button id="btn-login" onclick="login()">Entrar</button><br>
+                        <button id="btn-login" onclick="entrar()">Entrar</button><br>
                     </div>
                     <div class="formularioC">
                         <span id="txt-1">Não possui uma conta?</span>
@@ -143,14 +143,13 @@
 
 
     function entrar() {
-        aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+            
             return false;
         }
 
@@ -182,7 +181,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "./dashboard/dashboard_tempo_real.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
