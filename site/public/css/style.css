@@ -1394,3 +1394,21 @@ a {
     flex-direction: column;
     margin-top: 3%;
 }
+.help {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    align-items: center;
+    margin-bottom: 5%;
+    justify-content: center;
+}
+.btnHelp {
+    background-color: transparent;
+    border: solid 3px white;
+    border-radius: 5px;
+    padding: auto;
+    text-decoration: none;
+    text-align: center;
+    width: 70%;
+}
