@@ -14,7 +14,7 @@ const AMBIENTE = 'desenvolvimento';
 // const AMBIENTE = 'producao';
 
 const serial = async (
-    valoresDht11Umidade,
+     valoresDht11Umidade,
     valoresDht11Temperatura,
     valoresLuminosidade,
     valoresLm35Temperatura,
@@ -75,7 +75,7 @@ const serial = async (
 
                 // Este insert irá inserir os dados na tabela "medida" -> altere se necessário
                 // Este insert irá inserir dados de fk_aquario id=1 >> você deve ter o aquario de id 1 cadastrado.
-                sqlquery = `INSERT INTO medida (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave, momento, fk_aquario) VALUES (${dht11Umidade}, ${dht11Temperatura}, ${luminosidade}, ${lm35Temperatura}, ${chave}, CURRENT_TIMESTAMP, 1)`;
+                // sqlquery = `INSERT INTO medida (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave, momento, fkSensor) VALUES (${dht11Umidade}, ${dht11Temperatura}, ${luminosidade}, ${lm35Temperatura}, ${chave}, CURRENT_TIMESTAMP, 1)`;
 
                 // CREDENCIAIS DO BANCO REMOTO - SQL SERVER
                 const connStr = "Server=servidor-acquatec.database.windows.net;Database=bd-acquatec;User Id=usuarioParaAPIArduino_datawriter;Password=#Gf_senhaParaAPI;";
@@ -92,12 +92,12 @@ const serial = async (
             } else if (AMBIENTE == 'desenvolvimento') {
 
                 // Este insert irá inserir os dados na tabela "medida" -> altere se necessário
-                // Este insert irá inserir dados de fk_aquario id=1 >> você deve ter o aquario de id 1 cadastrado.
+                // Este insert irá inserir dados de fkSensor id=1 >> você deve ter o aquario de id 1 cadastrado.
                 await poolBancoDados.execute(
-                    'INSERT INTO dados (fkSensor,idDados, presenca, datahora) VALUES (?, ?, ?, ?)',
-                    [dht11Umidade, dht11Temperatura, luminosidade, lm35Temperatura, chave]
+                    'INSERT INTO dados (chave, datahora) VALUES (?, now())',
+                    [chave]
                 );
-                console.log("valores inseridos no banco: ", dht11Umidade + ", " + dht11Temperatura + ", " + luminosidade + ", " + lm35Temperatura + ", " + chave)
+                console.log("valores inseridos no banco: " + chave)
 
             } else {
                 throw new Error('Ambiente não configurado. Verifique o arquivo "main.js" e tente novamente.');
@@ -146,7 +146,7 @@ const servidor = (
 
 (async () => {
     const valoresDht11Umidade = [];
-    const valoresDht11Temperatura = [];
+        const valoresDht11Temperatura = [];
     const valoresLuminosidade = [];
     const valoresLm35Temperatura = [];
     const valoresChave = [];

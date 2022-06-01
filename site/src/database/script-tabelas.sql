@@ -37,7 +37,7 @@ create table medida (
 	lm35_temperatura DECIMAL,
 	chave TINYINT,
 	momento DATETIME,
-	fk_aquario INT,
+	fkSensor INT,
 	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
 );
 

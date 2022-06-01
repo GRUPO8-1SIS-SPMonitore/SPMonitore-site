@@ -6,7 +6,7 @@ function buscarUltimasMedidas(idDados, limite_linhas) {
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         instrucaoSql = `select top ${limite_linhas}
-        presenca,   
+        chave as presenca,   
                         datahora,
                         CONVERT(varchar, datahora, 108) as datahora_grafico
                     from dados
@@ -14,7 +14,7 @@ function buscarUltimasMedidas(idDados, limite_linhas) {
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select 
-        presenca,
+        chave as presenca,
                         datahora,
                         DATE_FORMAT(datahora,'%H:%i:%s') as datahora_grafico
                     from dados
@@ -44,8 +44,7 @@ function buscarMedidasEmTempoReal(idDados) {
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select 
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,
+        chave as presenca, 
                         DATE_FORMAT(datahora,'%H:%i:%s') as datahora_grafico, 
                         fk_sensor 
                         from dados where fk_sensor = ${idDados} 
