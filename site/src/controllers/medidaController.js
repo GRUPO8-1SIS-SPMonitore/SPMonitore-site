@@ -6,6 +6,7 @@ function buscarUltimasMedidas(req, res) {
 
     var idDados = req.params.idDados;
 
+    
     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 
     medidaModel.buscarUltimasMedidas(idDados, limite_linhas).then(function (resultado) {

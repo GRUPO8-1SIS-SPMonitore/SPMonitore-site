@@ -93,9 +93,18 @@ const serial = async (
 
                 // Este insert irá inserir os dados na tabela "medida" -> altere se necessário
                 // Este insert irá inserir dados de fkSensor id=1 >> você deve ter o aquario de id 1 cadastrado.
+
+               if (chave == 0 ) {
+                   chave == 10
+               }else{
+                   chave == 30
+               } 
+                
                 await poolBancoDados.execute(
-                    'INSERT INTO dados (chave, datahora) VALUES (?, now())',
+
+                    'INSERT INTO medidas (fkSensor, chave, datahora) VALUES (500, ?, now())',
                     [chave]
+
                 );
                 console.log("valores inseridos no banco: " + chave)
 

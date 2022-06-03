@@ -7,7 +7,7 @@ function cadastro(){
         return limparCampo()
     }
         if(num_cad.value.length == 11 ||  num_cad.value.length == 13){
-        var numero = num_cad.value
+        var fkFaculdade = num_cad.value
     }else{
         alert('Número inválido')
         return limparCampo()
@@ -34,16 +34,6 @@ function cadastro(){
     }
 }
 
-/* function login(){
-    var user = user_log.value
-    var pass = pass_log.value
-    if(user == 'teste@gmail.com' && pass == '1234'){
-       location ="dashboard_tempo_real.html"
-    }else{
-        alert('Usuário ou senha incorretos')
-        return
-    }
-}*/
 
 function limparCampo(){
     nome_input.value = "" 

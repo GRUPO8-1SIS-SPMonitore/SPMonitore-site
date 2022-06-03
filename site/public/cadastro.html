@@ -115,9 +115,9 @@
 
                     <input class="in-form-cad" placeholder="Exemplo@gmail.com" id="email_input" type="email"><br>
 
-                    <span class="txt-form-cad">Telefone</span><br>
+                    <span class="txt-form-cad">Código Institucional</span><br>
 
-                    <input class="in-form-cad" placeholder="(xx) xxxxx-xxxx" type="text" id="num_cad"><br>
+                    <input class="in-form-cad" placeholder="****" type="text" id="num_cad"><br>
 
                     <span class="txt-form-cad">Crie uma senha</span><span id="txt-aviso">Minimo de 8 caracteres</span><br>
 
@@ -147,10 +147,11 @@
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
+        var codVar = num_cad.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || codVar == "" ) {
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
             return false;
@@ -167,6 +168,7 @@
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
+                codServer : codVar,
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
@@ -180,7 +182,6 @@
                     window.location = "login.html";
                 }, "2000")
                 
-                limparFormulario();
             
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");

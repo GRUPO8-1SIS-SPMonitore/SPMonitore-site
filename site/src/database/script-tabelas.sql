@@ -1,77 +1,109 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-/* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
+create database Monitoramento;
+drop database monitoramento;
+use monitoramento;
 
-USE acquatec;
+create table Faculdade(
+idFaculdade int primary key auto_increment,
+nome varchar(30) not null,
+CNPJ char(18) not null unique,
+contato char(14) not null unique,
+cidade varchar(20) not null
+) auto_increment = 1001;
 
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+create table usuario(
+idUsuario int primary key auto_increment,
+nome varchar(35) not null,
+email varchar(40) not null unique,
+senha varchar(20) not null,
+fkfaculdade int ,
+foreign key (fkFaculdade) references Faculdade (idFaculdade)
+)auto_increment = 1;
+INSERT INTO usuario (nome, email,fkFaculdade, senha) VALUES ('deb', 'deb@gmail.com', '1001', '123');
+
+drop table usuario;
+create table tbLocal(
+idLocal int primary key auto_increment,
+Nome varchar(30) not null,
+qtdMaxima int not null check (qtdMaxima > 0),
+fkFaculdade int,
+foreign key (fkFaculdade) references Faculdade (idFaculdade)
+)auto_increment = 100;
+
+create table Sensor(
+idSensor int primary key auto_increment,
+modoSensor varchar(10) not null check (modoSensor = 'Entrada' or modoSensor = 'Saida'), 
+fkLocal int 
+)auto_increment = 500;
+
+create table medidas (
+idDados int primary key auto_increment,
+fkSensor int,
+	foreign key (fksensor) references sensor (idsensor),
+chave int  not null,
+datahora datetime not null
 );
+drop table medidas;
+select * from medidas;
+truncate medidas;
+select
+        chave,
+                        datahora,
+                        DATE_FORMAT(datahora,'%H:%i:%s') as datahora
+                    from medidas
+                    where fkSensor = 500
+                    order by idDados desc limit 7;
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-);
+select chave, count(chave) from medidas group by chave;
+select * from medidas;
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
-);
+insert into Faculdade (nome, CNPJ, contato, cidade) values
+('SpTech', '05.312.647/0001-72', '(11) 3589-4043', 'São Paulo');
+select * from Faculdade;
+insert into usuario (nome, email, telefone, senha, fkFaculdade) values
+('Wesley Souza', 'Wesley.souza@sptech.school', '11987456784', '123456', 1),
+('Marcos Brito', 'Marcos.Brito@sptech.school', '11989332784', '654321', 1),
+('Ana Beatriz', 'Ana.Beatriz@sptech.school', '11987000986', '356432', 1),
+('Antonia Marques', 'Antonia.Marques@unip.uni', '11990459795', '333r56', 2),
+('Lauro Martins', 'Lauro.Martins@unip.uni', '11919451121', '2234e6', 2),
+('Silvio Mendes', 'Silvio.Mendes@ufrj.uni', '21947757763', '55563a', 3),
+('Marcia Gomes', 'Marcia.Gomes@ufrj.uni', '21989899784', 'abcde2', 3),
+('Aurélio matias', 'Aurelio.Matias@unibrasil.com', '41917411143', '1234ac', 4),
+('Paula Sandra', 'Paula.Sandra@unibrasil.com', '41923477781', 'gdr456', 4);
 
-/* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
+insert into tblocal (nome, qtdMaxima, fkFaculdade) values
+('Biblioteca',50, 1), 
+('Biblioteca', 200, 2),
+('Biblioteca', 150, 3),
+('Biblioteca', 20, 4),
+('Sala de jogos', 25, 1),
+('Sala de jogos', 20, 2),
+('SpaceBreak', 75, 1),
+('SpaceBreak', 60, 1),
+('SpaceBreak', 50, 2),
+('SpaceBreak', 40, 3),
+('SpaceBreak', 10, 4);
 
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fkSensor INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
-);
+insert into Sensor (modoSensor, fkLocal) values
+('Entrada', 100);
+select * from Sensor;
 
 
-/* para sql server - remoto - produção */
-CREATE TABLE usuario (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
-);
-
-CREATE TABLE aviso (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT FOREIGN KEY REFERENCES usuario(id)
-);
-
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY IDENTITY(1,1),
-	descricao VARCHAR(300)
-);
-
-/* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
-
-CREATE TABLE medida (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT FOREIGN KEY REFERENCES aquario(id)
-);
+insert into dados (fksensor, idDados, presenca, datahora) values
+(500, '1', 1, '2022-03-01 16:00'),
+(500, '2', 1, '2022-03-01 16:00'),
+(500, '3', 1, '2022-03-01 16:00'),
+(500, '4', 1, '2022-03-01 16:00'),
+(500, '5', 1, '2022-03-01 16:00'),
+(501, '1', 1, '2022-03-01 18:00'),
+(501, '2', 1, '2022-03-01 18:00'),
+(508, '1', 1, '2022-03-01 9:00'),
+(508, '2', 1, '2022-03-01 9:00'),
+(508, '3', 1, '2022-03-01 9:00'),
+(509, '1', 1, '2022-03-01 9:40'),
+(509, '2', 1, '2022-03-01 9:40'),
+(509, '3', 1, '2022-03-01 9:40'),
+(512, '1', 1, '2022-03-01 12:00'),
+(512, '2', 1, '2022-03-01 12:00'),
+(512, '3', 1, '2022-03-01 12:00'),
+(513, '1', 1, '2022-03-01 12:25'),
+(513, '2', 1, '2022-03-01 12:25');
