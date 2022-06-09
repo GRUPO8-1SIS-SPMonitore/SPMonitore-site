@@ -44,22 +44,17 @@
         <div class="alert" style="background-color: green">
           Biblioteca
           Vazio
-          5%
         </div>
-        <div id="alert-dinamico" class="alert" style="background-color: red;">
-          SpaceBreak1
-          Lotado
-          100%
+        <div id="alert_dinamico" class="alert" style="background-color: #B02CE8; text-align: center;">
+          SpaceBreak 1
         </div>
-        <div class="alert" style="background-color: orange;">
+        <div class="alert" style="background-color: orange; text-align: center;">
           SpaceBreak2
           Cheio
-          77%
         </div>
-        <div class="alert" style="background-color: rgb(185, 185, 4);">
+        <div class="alert" style="background-color: rgb(185, 185, 4); text-align: center;">
           Jogos
           Médio
-          20%
         </div>
       </div>
       <div class="container-grafico">
@@ -245,6 +240,64 @@
           });
   }
 
+  function alertar(chave, idDados) {
+    console.log('chegou no alertar ', chave);
+        var limites = {
+            muito_quente: 75,
+            quente: 50,
+            ideal: 25,
+            frio: 10,
+            muito_frio: 5
+        };
+
+            if (chave >= limites.muito_quente) {
+              alert_dinamico.innerHTML = `Muito cheio`;
+              alert_dinamico.style.backgroundColor = "red"  
+                console.log("caiu no 1")
+            }
+            else if (chave < limites.muito_quente && chave >= limites.quente) {
+              alert_dinamico.innerHTML = `Space Break 1 Cheio`;
+              alert_dinamico.style.backgroundColor = "orange"
+                console.log("caiu no 2")
+            }
+            else if (chave < limites.quente && chave > limites.frio) {
+              alert_dinamico.innerHTML = `Space Break 1 Lotação média`;
+              alert_dinamico.style.backgroundColor = "yellow"
+                console.log("caiu no 3")
+            }
+            else if (chave <= limites.frio && chave > limites.muito_frio) {
+              alert_dinamico.innerHTML = `Space Break 1 Pouco usado`;
+              alert_dinamico.style.backgroundColor = "green"
+                console.log("caiu no 4")
+            }
+            else if (chave < limites.min_chave) {
+              alert_dinamico.innerHTML = `Space Break 1 Vazio`;
+              alert_dinamico.style.backgroundColor = "green"
+                console.log("caiu no 5")
+            }
+
+        var card;
+/*
+        if (idDados == 1) {
+            temp_aquario_1.innerHTML = temperatura + "°C";
+            card = card_1
+        } else if (idDados == 2) {
+            temp_aquario_2.innerHTML = temperatura + "°C";
+            card = card_2
+        } else if (idDados == 3) {
+            temp_aquario_3.innerHTML = temperatura + "°C";
+            card = card_3
+        } else if (idDados == 4) {
+            temp_aquario_4.innerHTML = temperatura + "°C";
+            card = card_4
+        }
+
+        // alterando
+        card.className = classe_temperatura;*/
+
+    }
+
+
   // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
   // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
   // A função *plotarGrafico* também invoca a função *atualizarGrafico*
@@ -257,9 +310,9 @@
 
               {
                   yAxisID: 'y-chave',
-                  label: 'Chave',
-                  borderColor: '#FFF',
-                  backgroundColor: '#32b9cd8f',
+                  label: 'Space-Break 1',
+                  borderColor: '#B02CE8',
+                  backgroundColor: '#B02CE8',
                   fill: true,
                   data: []
               }
@@ -270,10 +323,6 @@
           var registro = resposta[i];
           medidas.labels.push(registro.Hora);
           medidas.datasets[0].data.push(registro.chave);
-      
-        
-      
-      
         }
       
 
@@ -300,7 +349,7 @@
                       id: 'y-chave',
                       ticks: {
                           beginAtZero: true,
-                          max: 70,
+                          max: 40,
                           min: 0
                       }
                   }],
@@ -336,6 +385,7 @@
                   medidas.datasets[0].data.push(novoRegistro[0].chave); // incluir uma nova medida de temperatura
 
                   window.grafico_linha.update();
+                  alertar(novoRegistro[novoRegistro.length-1].chave, 1)
 
                   // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
                   proximaAtualizacao = setTimeout(() => atualizarGrafico(idDados, medidas), 2000);
